@@ -5,7 +5,7 @@
   <div><div class="tt-page-label"><a href="{{ url_for('locomotive.index') }}">Locomotives</a> / Add</div><h1 class="tt-page-title">Add Locomotive</h1></div>
 </div>
 <div class="tt-content-card">
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="tt-form-grid">
       <div class="tt-form-group"><label>Number *</label><input type="text" name="number" required placeholder="e.g. 66001" autofocus></div>
@@ -19,6 +19,11 @@
       <div class="tt-form-group"><label>Status</label><select name="status"><option value="active">Active</option><option value="withdrawn">Withdrawn</option><option value="preserved">Preserved</option><option value="stored">Stored</option><option value="scrapped">Scrapped</option></select></div>
       <div class="tt-form-group"><label>Country</label><select name="country_code"><option value="">— Select country —</option>{% for c in countries %}<option value="{{ c.code }}">{{ c.name }}</option>{% endfor %}</select></div>
       <div class="tt-form-group" style="grid-column:1/-1;"><label>Notes</label><textarea name="notes" rows="3"></textarea></div>
+      <div class="tt-form-group" style="grid-column:1/-1;">
+        <label>Photo</label>
+        <input type="file" name="image" accept=".jpg,.jpeg,.png,.webp" style="padding:4px;">
+        <small style="color:#999;font-family:'Times New Roman',serif;">JPG, PNG or WEBP, max 5MB</small>
+      </div>
     </div>
     <div class="tt-form-actions">
       <button type="submit" class="tt-btn tt-btn-primary">Save Locomotive</button>

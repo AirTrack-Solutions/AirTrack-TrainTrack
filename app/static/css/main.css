@@ -27,7 +27,7 @@
 
 .tt-col { flex: 1; }
 
-.tt-card {
+.tt-card { white-space: nowrap;
     background-color: #f9f9f9;
     border: 1px solid #7a1a0a;
     border-radius: 10px;
@@ -51,7 +51,7 @@
 /* ===== CONTENT CARD ===== */
 
 .tt-content-card {
-    width: calc(100% - 100px);
+    width: calc(100% - 60px);
     margin-bottom: 25px;
     background-color: #f9f9f9;
     border: 1px solid #7a1a0a;

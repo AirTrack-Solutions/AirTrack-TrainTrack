@@ -5,7 +5,7 @@
   <div><div class="tt-page-label"><a href="{{ url_for('locomotive.detail', loco_id=loco.id) }}">{{ loco.number }}</a> / Edit</div><h1 class="tt-page-title">Edit {{ loco.number }}</h1></div>
 </div>
 <div class="tt-content-card">
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="tt-form-grid">
       <div class="tt-form-group"><label>Number *</label><input type="text" name="number" value="{{ loco.number }}" required></div>
@@ -19,6 +19,21 @@
       <div class="tt-form-group"><label>Status</label><select name="status">{% for s in ['active','withdrawn','preserved','stored','scrapped'] %}<option value="{{ s }}" {{ 'selected' if loco.status == s }}>{{ s|capitalize }}</option>{% endfor %}</select></div>
       <div class="tt-form-group"><label>Country</label><select name="country_code"><option value="">— Select —</option>{% for c in countries %}<option value="{{ c.code }}" {{ 'selected' if loco.country_code == c.code }}>{{ c.name }}</option>{% endfor %}</select></div>
       <div class="tt-form-group" style="grid-column:1/-1;"><label>Notes</label><textarea name="notes" rows="3">{{ loco.notes or '' }}</textarea></div>
+      <div class="tt-form-group" style="grid-column:1/-1;">
+        <label>Photo</label>
+        {% if loco.image %}
+        <div style="margin-bottom:8px;">
+          <img src="{{ url_for('static', filename='images/locos/' + loco.image) }}"
+               alt="{{ loco.number }}"
+               style="max-height:120px;border-radius:4px;border:1px solid #ddd;">
+          <label style="display:inline-flex;align-items:center;gap:6px;margin-left:12px;color:#999;font-size:0.85rem;cursor:pointer;">
+            <input type="checkbox" name="delete_image" value="1"> Remove photo
+          </label>
+        </div>
+        {% endif %}
+        <input type="file" name="image" accept=".jpg,.jpeg,.png,.webp" style="padding:4px;">
+        <small style="color:#999;font-family:'Times New Roman',serif;">JPG, PNG or WEBP, max 5MB</small>
+      </div>
     </div>
     <div class="tt-form-actions">
       <button type="submit" class="tt-btn tt-btn-primary">Save Changes</button>

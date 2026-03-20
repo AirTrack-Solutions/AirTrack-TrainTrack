@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block title %}Reports{% endblock %}
 {% block content %}
+
 <div class="tt-page-header">
   <div><div class="tt-page-label">Analytics</div><h1 class="tt-page-title">Reports</h1></div>
   <div class="tt-page-actions">
@@ -8,43 +9,55 @@
     <a href="{{ url_for('reports.needs_cops') }}" class="tt-btn tt-btn-outline">Needs Cops</a>
   </div>
 </div>
-<div class="stats-grid">
-  <div class="tt-card"><div class="tt-card-title">{{ total_locos }}</div><div class="stat-label">Locomotives</div></div>
-  <div class="tt-card"><div class="tt-card-title">{{ total_formations }}</div><div class="stat-label">Formations</div></div>
-  <div class="tt-card"><div class="tt-card-title" style="color:#7a1a0a;">{{ total_cops }}</div><div class="stat-label">Cops</div></div>
-  <div class="tt-card"><div class="tt-card-title">{{ total_dubs }}</div><div class="stat-label">Dubs</div></div>
-  <div class="tt-card"><div class="tt-card-title">{{ total_sightings }}</div><div class="stat-label">Total Sightings</div></div>
+
+<div class="tt-row">
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">{{ total_locos }} Locomotives</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">{{ total_formations }} Formations</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">{{ total_cops }} Cops</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">{{ total_dubs }} Dubs</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">{{ total_sightings }} Sightings</div></div></div>
 </div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-  <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Top Locations</div>
+
+<div style="width:calc(100% - 100px);margin:0 auto 25px;display:grid;grid-template-columns:repeat(8,1fr);gap:25px;">
+
+  <div class="tt-content-card" style="grid-column:1/3;margin:0;">
+    <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:10px;">Top Locations</h3>
     {% for loc in top_locations %}
-    <div style="display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--card-border);font-size:0.88rem;">
-      <span>{{ loc.name }}</span><span style="color:var(--gold);font-weight:700;">{{ loc.cnt }}</span>
+    <div style="display:flex;justify-content:space-between;padding:0.35rem 0;border-bottom:1px solid #eee;font-family:'Times New Roman',serif;font-size:0.88rem;">
+      <span>{{ loc.name }}</span><span style="color:#7a1a0a;font-weight:bold;">{{ loc.cnt }}</span>
     </div>
-    {% else %}<div style="color:#666;">No data yet.</div>{% endfor %}
+    {% else %}<div style="color:#999;font-family:'Times New Roman',serif;font-size:0.88rem;">No data yet.</div>{% endfor %}
   </div>
-  <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Top Operators</div>
+
+  <div class="tt-content-card" style="grid-column:3/5;margin:0;">
+    <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:10px;">Top Operators</h3>
     {% for op in top_operators %}
-    <div style="display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--card-border);font-size:0.88rem;">
-      <span>{{ op.name }}</span><span style="color:var(--gold);font-weight:700;">{{ op.cnt }}</span>
+    <div style="display:flex;justify-content:space-between;padding:0.35rem 0;border-bottom:1px solid #eee;font-family:'Times New Roman',serif;font-size:0.88rem;">
+      <span>{{ op.name }}</span><span style="color:#7a1a0a;font-weight:bold;">{{ op.cnt }}</span>
     </div>
-    {% else %}<div style="color:#666;">No data yet.</div>{% endfor %}
+    {% else %}<div style="color:#999;font-family:'Times New Roman',serif;font-size:0.88rem;">No data yet.</div>{% endfor %}
   </div>
-  <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Sightings by Type</div>
+
+  <div class="tt-content-card" style="grid-column:5/7;margin:0;">
+    <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:10px;">By Type</h3>
     {% for t in by_type %}
-    <div style="display:flex;justify-content:space-between;padding:0.4rem 0;border-bottom:1px solid var(--card-border);font-size:0.88rem;">
-      <span>{{ t.name }}</span><span style="color:var(--gold);font-weight:700;">{{ t.cnt }}</span>
+    <div style="display:flex;justify-content:space-between;padding:0.35rem 0;border-bottom:1px solid #eee;font-family:'Times New Roman',serif;font-size:0.88rem;">
+      <span>{{ t.name }}</span><span style="color:#7a1a0a;font-weight:bold;">{{ t.cnt }}</span>
     </div>
-    {% else %}<div style="color:#666;">No data yet.</div>{% endfor %}
+    {% else %}<div style="color:#999;font-family:'Times New Roman',serif;font-size:0.88rem;">No data yet.</div>{% endfor %}
   </div>
-  <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Recent Cops</div>
+
+  <div class="tt-content-card" style="grid-column:7/9;margin:0;">
+    <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:10px;">Recent Cops</h3>
     {% for cop in cops %}
-    <div style="padding:0.4rem 0;border-bottom:1px solid var(--card-border);font-size:0.88rem;">
-      <span style="color:var(--gold);font-weight:700;">{{ cop.loco_number }}</span>
-      {% if cop.loco_name %}<span style="color:#666;"> — {{ cop.loco_name }}</span>{% endif %}
-      <span style="float:right;color:var(--muted);">{{ cop.cop_date }}</span>
+    <div style="padding:0.35rem 0;border-bottom:1px solid #eee;font-family:'Times New Roman',serif;font-size:0.88rem;">
+      <span style="color:#7a1a0a;font-weight:bold;">{{ cop.loco_number }}</span>
+      {% if cop.loco_name %}<span style="color:#999;"> — {{ cop.loco_name }}</span>{% endif %}
+      <span style="float:right;color:#999;">{{ cop.cop_date }}</span>
     </div>
-    {% else %}<div style="color:#666;">No cops logged yet.</div>{% endfor %}
+    {% else %}<div style="color:#999;font-family:'Times New Roman',serif;font-size:0.88rem;">No cops logged yet.</div>{% endfor %}
   </div>
+
 </div>
+
 {% endblock %}

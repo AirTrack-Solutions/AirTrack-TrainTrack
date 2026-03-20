@@ -7,8 +7,32 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash, jsonify, current_app
 from sqlalchemy import text
 from extensions import db
+from werkzeug.utils import secure_filename
+from pathlib import Path
+import os
 
 locomotive_bp = Blueprint("locomotive", __name__, url_prefix="/locomotives")
+
+ALLOWED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.webp', '.gif'}
+MAX_IMAGE_SIZE = 5 * 1024 * 1024  # 5MB
+
+
+def _allowed_image(filename):
+    return Path(filename).suffix.lower() in ALLOWED_EXTENSIONS
+
+
+def _save_loco_image(file, loco_id):
+    """Save uploaded image, return filename or None."""
+    if not file or not file.filename:
+        return None
+    if not _allowed_image(file.filename):
+        return None
+    ext = Path(file.filename).suffix.lower()
+    filename = f"loco_{loco_id}{ext}"
+    upload_dir = Path(current_app.static_folder) / 'images' / 'locos'
+    upload_dir.mkdir(parents=True, exist_ok=True)
+    file.save(upload_dir / filename)
+    return filename
 
 
 def _get_lookups():
@@ -184,7 +208,7 @@ def add():
 
         try:
             with db.engine.begin() as conn:
-                conn.execute(
+                result = conn.execute(
                     text("""
                         INSERT INTO locomotives
                             (number, name, class_id, type_id, operator_id, depot_id,
@@ -200,6 +224,21 @@ def add():
                         "country": country, "notes": notes,
                     }
                 )
+                loco_id = result.lastrowid
+
+            # Handle image upload after we have the ID
+            image_file = request.files.get("image")
+            if image_file and image_file.filename:
+                filename = _save_loco_image(image_file, loco_id)
+                if filename:
+                    with db.engine.begin() as conn:
+                        conn.execute(
+                            text("UPDATE locomotives SET image=:img WHERE id=:id"),
+                            {"img": filename, "id": loco_id}
+                        )
+                else:
+                    flash("Image format not supported (use JPG, PNG, WEBP).", "warning")
+
             flash(f"Locomotive {number} added.", "success")
             return redirect(url_for("locomotive.index"))
         except Exception as e:
@@ -257,6 +296,28 @@ def edit(loco_id):
                         "country": country, "notes": notes, "id": loco_id,
                     }
                 )
+
+            # Handle image upload
+            image_file = request.files.get("image")
+            if image_file and image_file.filename:
+                filename = _save_loco_image(image_file, loco_id)
+                if filename:
+                    with db.engine.begin() as conn:
+                        conn.execute(
+                            text("UPDATE locomotives SET image=:img WHERE id=:id"),
+                            {"img": filename, "id": loco_id}
+                        )
+                else:
+                    flash("Image format not supported (use JPG, PNG, WEBP).", "warning")
+
+            # Handle image delete
+            if request.form.get("delete_image") == "1":
+                with db.engine.begin() as conn:
+                    conn.execute(
+                        text("UPDATE locomotives SET image=NULL WHERE id=:id"),
+                        {"id": loco_id}
+                    )
+
             flash(f"Locomotive {number} updated.", "success")
             return redirect(url_for("locomotive.detail", loco_id=loco_id))
 

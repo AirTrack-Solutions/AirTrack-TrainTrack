@@ -43,6 +43,13 @@
     <div class="tt-content-card">
       <h3>Details</h3>
       {% macro row(label, val) %}<div style="margin-bottom:8px;border-bottom:1px solid #eee;padding-bottom:6px;"><strong style="color:#7a1a0a;font-size:0.8rem;">{{ label }}</strong><br>{{ val or '—' }}</div>{% endmacro %}
+      {% if loco.image %}
+      <div style="margin-bottom:1rem;">
+        <img src="{{ url_for('static', filename='images/locos/' + loco.image) }}"
+             alt="{{ loco.number }}"
+             style="width:100%;border-radius:6px;border:1px solid #ddd;object-fit:cover;max-height:200px;">
+      </div>
+      {% endif %}
       {{ row('Number', loco.number) }}
       {{ row('Name', loco.name) }}
       {{ row('Class', loco.class_name) }}

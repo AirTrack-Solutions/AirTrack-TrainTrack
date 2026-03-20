@@ -97,6 +97,7 @@ def update_theme():
         current_app.logger.exception("update_theme failed")
         flash(f"Error: {e}", "danger")
     return redirect(url_for("admin.admin_settings"))
+@admin_bp.route('/save_settings', methods=['POST'])
 def save_settings():
     try:
         data = request.get_json(silent=True)
