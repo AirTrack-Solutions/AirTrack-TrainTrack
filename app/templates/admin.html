@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Admin{% endblock %}
+{% block content %}
+
+<div class="tt-page-header">
+  <div>
+    <div class="tt-page-label">System</div>
+    <h1 class="tt-page-title">Admin</h1>
+  </div>
+</div>
+
+<div class="tt-row">
+  <div class="tt-col">
+    <div class="tt-content-card">
+      <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:12px;">Settings</h3>
+      <a href="{{ url_for('admin.admin_settings') }}" class="tt-btn tt-btn-outline" style="display:block;text-align:center;margin-bottom:8px;">User Settings</a>
+      <a href="{{ url_for('admin.cockpit') }}" class="tt-btn tt-btn-primary" style="display:block;text-align:center;">🚂 Driver's Cab</a>
+    </div>
+  </div>
+  <div class="tt-col">
+    <div class="tt-content-card">
+      <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:12px;">Database</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <form method="post" action="{{ url_for('backup_database') }}">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="tt-btn tt-btn-outline" style="width:100%;">Backup Database</button>
+        </form>
+        <form method="post" action="{{ url_for('flush_database') }}"
+              onsubmit="return confirm('This will delete ALL sightings, formations, and locomotives. Are you sure?');">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="confirm_flush" value="CONFIRM">
+          <button type="submit" class="tt-btn tt-btn-danger" style="width:100%;">Flush Database</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="tt-col">
+    <div class="tt-content-card">
+      <h3 style="color:#7a1a0a;font-family:'Times New Roman',serif;margin-bottom:12px;">System Info</h3>
+      <div style="font-family:'Times New Roman',serif;font-size:0.95rem;color:#333;line-height:1.8;">
+        <div>Version: <strong>{{ TRAINTRACK_DISPLAY_VERSION }}</strong></div>
+        <div>Role: <strong>{{ TRAINTRACK_ROLE }}</strong></div>
+        {% if settings.get('FirstName') %}
+        <div>User: <strong>{{ settings.get('FirstName') }} {{ settings.get('LastName') }}</strong></div>
+        {% endif %}
+        {% if settings.get('Callsign') %}
+        <div>Callsign: <strong>{{ settings.get('Callsign') }}</strong></div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

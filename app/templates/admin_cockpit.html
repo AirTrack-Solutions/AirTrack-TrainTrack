@@ -1,0 +1,424 @@
+<!--
+  TrainTrack 1.0.0 "Stephenson"
+  Copyright (c) 2025 Trevor ("Subhuti"). All rights reserved.
+  SPDX-License-Identifier: LicenseRef-TrainTrack-Proprietary-NC
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+  <title>Driver's Cab</title>
+
+  <script>
+    (function () {
+      try {
+        var t = '{{ selected_theme or "default" }}';
+        document.documentElement.classList.add('theme-' + t);
+        if (document.body) {
+          document.body.classList.add('theme-' + t);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('theme-' + t);
+          });
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/themes.css') }}">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%; height: 100%;
+      overflow: hidden;
+      background: transparent;
+      font-family: "Courier New", monospace;
+    }
+
+    /* ── FULL SCREEN CAB BACKGROUND ── */
+    .admin-background {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-attachment: fixed;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ── GAUGES ── */
+    .gauge {
+      position: fixed;
+      width: 58px;
+      height: 58px;
+      background: radial-gradient(circle at 40% 35%, #2a2a2a, #111);
+      border: 2px solid #555;
+      border-radius: 50%;
+      box-shadow: inset 0 0 6px #000, 0 0 5px rgba(0,0,0,0.6);
+    }
+
+    .needle {
+      position: absolute;
+      width: 2px;
+      height: 40%;
+      background: #e33;
+      top: 10%;
+      left: 50%;
+      transform-origin: bottom center;
+      transform: rotate(-135deg);
+      transition: transform 2s ease-out;
+      z-index: 3;
+    }
+
+    .tick {
+      position: absolute;
+      width: 2px;
+      height: calc(50% + 1px);
+      top: 0; left: 50%;
+      transform-origin: bottom center;
+      background: #888;
+      clip-path: inset(0 0 80% 0);
+      z-index: 2;
+    }
+
+    .tick-0 { transform: translateX(-50%) rotate(-135deg); }
+    .tick-1 { transform: translateX(-50%) rotate(-101.25deg); }
+    .tick-2 { transform: translateX(-50%) rotate(-67.5deg); }
+    .tick-3 { transform: translateX(-50%) rotate(-33.75deg); }
+    .tick-4 { transform: translateX(-50%) rotate(0deg); }
+    .tick-5 { transform: translateX(-50%) rotate(33.75deg); }
+    .tick-6 { transform: translateX(-50%) rotate(67.5deg); }
+    .tick-7 { transform: translateX(-50%) rotate(101.25deg); }
+    .tick-8 { transform: translateX(-50%) rotate(135deg); }
+
+    .gauge-value {
+      position: absolute;
+      width: 100%;
+      bottom: 4px;
+      text-align: center;
+      font-size: 0.75em;
+      color: #0ff;
+      text-shadow: 0 0 4px #0ff;
+    }
+
+    .gauge-label {
+      position: absolute;
+      width: 120%;
+      left: -10%;
+      bottom: -14px;
+      text-align: center;
+      font-size: 0.52em;
+      color: #aaa;
+      white-space: nowrap;
+    }
+
+    /* Gauge positions — tune these to sit on the console instruments */
+    .gauge-locos      { top: 42%; left: .5%; }
+    .gauge-formations { top: 52%; left: 1.5%; }
+    .gauge-sightings  { top: 62%; left: 2.5%; }
+    .gauge-cops       { top: 66%; left: 37.5%; }
+    .gauge-dubs       { top: 42%; left: 96.5%; }
+    .gauge-operators  { top: 52%; left: 95.5%; }
+    .gauge-locations  { top: 62%; left: 94.5%; }
+
+    /* ── CENTRE AMBER DISPLAY ── */
+    #cockpit-center-display {
+      position: fixed;
+      top: 60.5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 28px;
+      background: rgba(255, 100, 0, 0.08);
+      border: 1px solid rgba(255, 140, 0, 0.5);
+      border-radius: 5px;
+      text-align: center;
+      padding: 2px 8px;
+      box-shadow: 0 0 12px rgba(255, 100, 0, 0.4);
+      overflow: hidden;
+    }
+
+    #callsign-display {
+      color: #ffaa00;
+      font-size: 1.1em;
+      font-weight: bold;
+      letter-spacing: 0.15em;
+      text-shadow: 0 0 8px #ff8800;
+      line-height: 24px;
+    }
+
+    /* ── HUD BUTTONS ── */
+    .cockpit-hud-column {
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .hud-left {
+      bottom: 34%;
+      left: 17%;
+      transform: rotate(-34deg);
+      transform-origin: bottom left;
+    }
+
+    .hud-right {
+      bottom: 36%;
+      right: 15%;
+      transform: rotate(34deg);
+      transform-origin: bottom right;
+      align-items: flex-end;
+    }
+
+    .cockpit-hud-button {
+      padding: 4px 12px;
+      font-size: 0.75em;
+      font-family: "Courier New", monospace;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(0,255,255,0.35);
+      border-radius: 3px;
+      color: rgba(0,255,255,0.5);
+      text-shadow: 0 0 3px rgba(0,255,255,0.3);
+      box-shadow: 0 0 4px rgba(0,255,255,0.1);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .cockpit-hud-button:hover {
+      background: rgba(0,255,255,0.45);
+      color: #000;
+      box-shadow: 0 0 10px rgba(0,255,255,0.6);
+    }
+
+    .cockpit-hud-button.btn-green {
+      border-color: rgba(0,255,100,0.5);
+      color: rgba(0,255,100,0.6);
+      text-shadow: 0 0 3px rgba(0,255,100,0.3);
+    }
+
+    .cockpit-hud-button.btn-green:hover {
+      background: rgba(0,255,100,0.45);
+      color: #000;
+    }
+
+    .cockpit-hud-button.btn-red {
+      border-color: rgba(255,60,60,0.5);
+      color: rgba(255,80,80,0.6);
+    }
+
+    .cockpit-hud-button.btn-red:hover {
+      background: rgba(255,60,60,0.45);
+      color: #fff;
+    }
+
+    .cockpit-hud-form { display: contents; }
+
+    /* ── LIVE CLOCK ── */
+    #cab-clock {
+      position: fixed;
+      bottom: 4%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(0,255,255,0.3);
+      font-size: 0.65em;
+      letter-spacing: 0.2em;
+    }
+
+    /* ── EXIT BUTTON ── */
+    #cab-exit {
+      position: fixed;
+      top: 12px;
+      right: 16px;
+      font-size: 0.7em;
+    }
+
+    /* ── MODAL ── */
+    .modal-backdrop {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,0.6);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-message {
+      background: #111;
+      color: #0ff;
+      padding: 1.5rem 2rem;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      box-shadow: 0 0 15px #0ff;
+    }
+  </style>
+</head>
+
+<body class="theme-{{ selected_theme or 'default' }}">
+
+  <!-- FULL SCREEN CAB BACKGROUND -->
+  <div class="admin-background"></div>
+
+  <!-- GAUGES -->
+  <div class="gauge gauge-locos" data-count="{{ stats.locomotives or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Locomotives</div>
+  </div>
+
+  <div class="gauge gauge-formations" data-count="{{ stats.formations or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Formations</div>
+  </div>
+
+  <div class="gauge gauge-sightings" data-count="{{ stats.sightings or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Sightings</div>
+  </div>
+
+  <div class="gauge gauge-cops" data-count="{{ stats.cops or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle" style="background:#ffaa00;"></div>
+    <div class="gauge-value" style="color:#ffaa00;text-shadow:0 0 4px #ff8800;">0</div>
+    <div class="gauge-label">Cops</div>
+  </div>
+
+  <div class="gauge gauge-dubs" data-count="{{ stats.dubs or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Dubs</div>
+  </div>
+
+  <div class="gauge gauge-operators" data-count="{{ stats.operators or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Operators</div>
+  </div>
+
+  <div class="gauge gauge-locations" data-count="{{ stats.locations or 0 }}">
+    <div class="tick tick-0"></div><div class="tick tick-1"></div><div class="tick tick-2"></div>
+    <div class="tick tick-3"></div><div class="tick tick-4"></div><div class="tick tick-5"></div>
+    <div class="tick tick-6"></div><div class="tick tick-7"></div><div class="tick tick-8"></div>
+    <div class="needle"></div>
+    <div class="gauge-value">0</div>
+    <div class="gauge-label">Locations</div>
+  </div>
+
+  <!-- CENTRE AMBER DISPLAY -->
+  <div id="cockpit-center-display">
+    <div id="callsign-display">
+      {% if settings.get('Callsign') %}{{ settings.get('Callsign') }}
+      {% elif settings.get('FirstName') %}{{ settings.get('FirstName') }} {{ settings.get('LastName') }}
+      {% else %}TRAINTRACK{% endif %}
+    </div>
+  </div>
+
+  <!-- HUD LEFT -->
+  <div class="cockpit-hud-column hud-left">
+    <a href="{{ url_for('main.dashboard') }}" class="cockpit-hud-button btn-green">Home</a>
+    <a href="{{ url_for('sighting.log') }}"   class="cockpit-hud-button btn-green">Log Sighting</a>
+    <a href="{{ url_for('locomotive.add') }}" class="cockpit-hud-button">Add Loco</a>
+    <a href="{{ url_for('formation.add') }}"  class="cockpit-hud-button">Add Formation</a>
+    <a href="{{ url_for('location.add') }}"   class="cockpit-hud-button">Add Location</a>
+    <a href="{{ url_for('operator.add') }}"   class="cockpit-hud-button">Add Operator</a>
+    <form class="cockpit-hud-form" method="post" action="{{ url_for('backup_database') }}">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <button class="cockpit-hud-button">Backup DB</button>
+    </form>
+    <form class="cockpit-hud-form" method="post" action="{{ url_for('flush_database') }}"
+          onsubmit="return confirm('FLUSH ALL DATA — are you sure?');">
+      <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+      <input type="hidden" name="confirm_flush" value="CONFIRM">
+      <button class="cockpit-hud-button btn-red">Flush Database</button>
+    </form>
+  </div>
+
+  <!-- HUD RIGHT -->
+  <div class="cockpit-hud-column hud-right">
+    <a href="{{ url_for('admin.admin_settings') }}" class="cockpit-hud-button">Settings</a>
+    <a href="{{ url_for('reports.index') }}"        class="cockpit-hud-button">Stats</a>
+    <a href="{{ url_for('reports.cops_list') }}"    class="cockpit-hud-button">Cops List</a>
+    <a href="{{ url_for('reports.needs_cops') }}"   class="cockpit-hud-button">Needs Cops</a>
+    <a href="{{ url_for('locomotive.index') }}"     class="cockpit-hud-button">Locomotives</a>
+    <a href="{{ url_for('formation.index') }}"      class="cockpit-hud-button">Formations</a>
+    <a href="{{ url_for('operator.index') }}"       class="cockpit-hud-button">Operators</a>
+    <a href="{{ url_for('location.index') }}"       class="cockpit-hud-button">Locations</a>
+  </div>
+
+  <!-- EXIT -->
+  <a href="{{ url_for('main.dashboard') }}" id="cab-exit" class="cockpit-hud-button">✕ Exit Cab</a>
+
+  <!-- CLOCK -->
+  <div id="cab-clock">--:--:--</div>
+
+  <!-- MODAL -->
+  <div class="modal-backdrop" id="modal">
+    <div class="modal-message" id="modal-msg"></div>
+  </div>
+
+  <script>
+    // Clock
+    function updateClock() {
+      const el = document.getElementById('cab-clock');
+      if (el) el.textContent = new Date().toTimeString().split(' ')[0];
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    // Animate gauges
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.gauge').forEach(function (gauge) {
+        const count = parseInt(gauge.dataset.count) || 0;
+        const valEl = gauge.querySelector('.gauge-value');
+        const needle = gauge.querySelector('.needle');
+        if (valEl) valEl.textContent = count;
+
+        // Map count to needle angle: 0 = -135deg, max = +135deg
+        // Use a log scale so small numbers still show movement
+        const maxExpected = 1000;
+        const ratio = Math.min(count / maxExpected, 1);
+        const angle = -135 + (ratio * 270);
+        setTimeout(function () {
+          if (needle) needle.style.transform = 'rotate(' + angle + 'deg)';
+        }, 300);
+      });
+    });
+
+    function showModal(msg) {
+      const m = document.getElementById('modal');
+      const t = document.getElementById('modal-msg');
+      if (m && t) {
+        t.textContent = msg;
+        m.style.display = 'flex';
+        setTimeout(function () { m.style.display = 'none'; }, 2500);
+      }
+    }
+  </script>
+</body>
+</html>

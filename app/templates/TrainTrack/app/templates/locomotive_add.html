@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Add Locomotive{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div><div class="tt-page-label"><a href="{{ url_for('locomotive.index') }}">Locomotives</a> / Add</div><h1 class="tt-page-title">Add Locomotive</h1></div>
+</div>
+<div class="tt-content-card">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div class="tt-form-grid">
+      <div class="tt-form-group"><label>Number *</label><input type="text" name="number" required placeholder="e.g. 66001" autofocus></div>
+      <div class="tt-form-group"><label>Name</label><input type="text" name="name" placeholder="e.g. Flying Scotsman"></div>
+      <div class="tt-form-group"><label>Class</label><select name="class_id"><option value="">— Select class —</option>{% for c in classes %}<option value="{{ c.id }}">{{ c.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Type</label><select name="type_id"><option value="">— Select type —</option>{% for t in types %}<option value="{{ t.id }}">{{ t.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Operator</label><select name="operator_id"><option value="">— Select operator —</option>{% for o in operators %}<option value="{{ o.id }}">{{ o.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Depot</label><select name="depot_id"><option value="">— Select depot —</option>{% for d in depots %}<option value="{{ d.id }}">{{ d.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Livery</label><input type="text" name="livery" placeholder="e.g. Freightliner Grey"></div>
+      <div class="tt-form-group"><label>Built Year</label><input type="number" name="built_year" min="1800" max="2099" placeholder="e.g. 1998"></div>
+      <div class="tt-form-group"><label>Status</label><select name="status"><option value="active">Active</option><option value="withdrawn">Withdrawn</option><option value="preserved">Preserved</option><option value="stored">Stored</option><option value="scrapped">Scrapped</option></select></div>
+      <div class="tt-form-group"><label>Country</label><select name="country_code"><option value="">— Select country —</option>{% for c in countries %}<option value="{{ c.code }}">{{ c.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group" style="grid-column:1/-1;"><label>Notes</label><textarea name="notes" rows="3"></textarea></div>
+    </div>
+    <div class="tt-form-actions">
+      <button type="submit" class="tt-btn tt-btn-primary">Save Locomotive</button>
+      <a href="{{ url_for('locomotive.index') }}" class="tt-btn tt-btn-outline">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

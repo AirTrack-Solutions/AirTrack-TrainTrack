@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Cops List{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div>
+    <div class="tt-page-label"><a href="{{ url_for('reports.index') }}">Reports</a></div>
+    <h1 class="tt-page-title">Cops List ({{ cops|length }})</h1>
+  </div>
+</div>
+<table class="tt-table">
+  <thead><tr><th>Date Copped</th><th>Number</th><th>Name</th><th>Class</th><th>Type</th><th>Operator</th><th>Location</th></tr></thead>
+  <tbody>
+    {% for cop in cops %}
+    <tr>
+      <td>{{ cop.cop_date }}</td>
+      <td><strong style="color:#7a1a0a;">{{ cop.loco_number }}</strong></td>
+      <td>{{ cop.loco_name or '—' }}</td>
+      <td>{{ cop.class_name or '—' }}</td>
+      <td>{{ cop.type_name or '—' }}</td>
+      <td>{{ cop.operator_name or '—' }}</td>
+      <td>{{ cop.location_name or '—' }}</td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7" style="text-align:center;padding:20px;color:#666;">No cops logged yet. Get out there!</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

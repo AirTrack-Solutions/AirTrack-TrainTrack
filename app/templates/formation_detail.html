@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ formation.set_number }}{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div><div class="tt-page-label"><a href="{{ url_for('formation.index') }}" style="color:var(--muted);text-decoration:none;">Formations</a> / {{ formation.set_number }}</div>
+  <h1 class="tt-page-title">{{ formation.set_number }}</h1></div>
+  <div class="tt-page-actions"><a href="{{ url_for('sighting.log') }}?formation_id={{ formation.id }}" class="tt-btn tt-btn-primary">+ Log Sighting</a></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 280px;gap:1.5rem;">
+  <div>
+    <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Vehicles ({{ vehicles|length }})</div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Pos</th><th>Vehicle Number</th><th>Type</th></tr></thead>
+        <tbody>
+          {% for v in vehicles %}
+          <tr><td>{{ v.position or '—' }}</td><td>{{ v.vehicle_number }}</td><td>{{ v.vehicle_type or '—' }}</td></tr>
+          {% else %}
+          <tr><td colspan="3" style="text-align:center;color:var(--muted);padding:1rem;">No vehicles recorded.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table></div>
+    </div>
+    <div class="tt-content-card" style="padding:0;"><div style="padding:1rem 1.5rem;border-bottom:1px solid var(--card-border);"><span class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;" style="margin:0;">Sightings</span></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Date</th><th>Location</th><th>Working</th><th>Type</th></tr></thead>
+        <tbody>
+          {% for s in sightings %}
+          <tr>
+            <td>{{ s.sighting_date }}</td><td>{{ s.location_name or '—' }}</td><td>{{ s.working or '—' }}</td>
+            <td>{% if s.is_cop %}<span class="tt-badge tt-badge-cop">COP</span>{% else %}<span class="tt-badge tt-badge-dub">Dub</span>{% endif %}</td>
+          </tr>
+          {% else %}
+          <tr><td colspan="4" style="text-align:center;color:var(--muted);padding:1rem;">No sightings.</td></tr>
+          {% endfor %}
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+  <div class="tt-content-card"><div class="card-title" style="color:#7a1a0a;font-family:Times New Roman,serif;font-weight:bold;margin-bottom:12px;">Details</div>
+    <div style="display:flex;flex-direction:column;gap:0.7rem;font-size:0.88rem;">
+      <div><div style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;">Class</div><div>{{ formation.class_name or '—' }}</div></div>
+      <div><div style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;">Operator</div><div>{{ formation.operator_name or '—' }}</div></div>
+      <div><div style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;">Status</div><div><span class="badge badge-{{ formation.status }}">{{ formation.status|capitalize }}</span></div></div>
+      {% if formation.notes %}<div><div style="color:var(--muted);font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;">Notes</div><div style="color:#666;">{{ formation.notes }}</div></div>{% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

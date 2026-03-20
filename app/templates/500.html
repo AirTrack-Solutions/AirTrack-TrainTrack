@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}500{% endblock %}
+{% block content %}
+<div style="text-align:center;padding:6rem 2rem;">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:6rem;font-weight:800;color:var(--card-border);">500</div>
+  <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;margin-bottom:1rem;">Something went wrong</h2>
+  <p style="color:var(--muted);margin-bottom:2rem;">There was an internal error. Check the logs.</p>
+  <a href="{{ url_for('main.dashboard') }}" class="tt-btn tt-btn-primary">Back to Dashboard</a>
+</div>
+{% endblock %}

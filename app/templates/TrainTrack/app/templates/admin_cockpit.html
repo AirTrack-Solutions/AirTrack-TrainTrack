@@ -1,0 +1,683 @@
+{% extends "base.html" %}
+{% block title %}Admin Cockpit{% endblock %}
+
+{% block head %}
+<style>
+/* ── COCKPIT SHELL ── */
+.cockpit {
+    position: relative;
+    width: calc(100% - 60px);
+    margin: 0 auto 20px;
+    background: #1a1a1a;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    font-family: "Courier New", monospace;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    min-height: 620px;
+}
+
+/* ── WINDSCREEN ── */
+.windscreen-frame {
+    position: relative;
+    width: 100%;
+    height: 340px;
+    background: #0d0d0d;
+    display: flex;
+    align-items: stretch;
+}
+
+.windscreen-pillar-left,
+.windscreen-pillar-right {
+    width: 60px;
+    background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+    flex-shrink: 0;
+    border-bottom: 4px solid #333;
+}
+
+.windscreen-pillar-left { border-right: 3px solid #111; }
+.windscreen-pillar-right { border-left: 3px solid #111; }
+
+.windscreen-glass {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-left: 6px solid #222;
+    border-right: 6px solid #222;
+}
+
+/* Track view — controlled by theme via .cockpit-view class */
+.windscreen-glass {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1a3a1a;
+}
+
+/* Frosted glass tint overlay */
+.windscreen-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.08);
+    pointer-events: none;
+}
+
+/* Window frame rubber seal */
+.windscreen-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 8px solid rgba(20,20,20,0.6);
+    border-radius: 4px;
+    pointer-events: none;
+    box-shadow: inset 0 0 30px rgba(0,0,0,0.3);
+}
+
+/* Wiper marks */
+.wiper {
+    position: absolute;
+    bottom: 0;
+    width: 2px;
+    height: 60%;
+    background: rgba(255,255,255,0.05);
+    transform-origin: bottom center;
+}
+.wiper-left  { left: 30%; transform: rotate(-15deg); }
+.wiper-right { right: 30%; transform: rotate(15deg); }
+
+/* ── CENTRE CONSOLE TOP ── */
+.console-top {
+    background: linear-gradient(to bottom, #2c2c2c, #252525);
+    border-top: 3px solid #444;
+    border-bottom: 2px solid #111;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.display-amber {
+    background: #000;
+    border: 2px solid #444;
+    border-radius: 4px;
+    padding: 6px 24px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffaa00;
+    text-shadow: 0 0 8px #ff8800, 0 0 16px #ff4400;
+    letter-spacing: 0.15em;
+    min-width: 240px;
+    text-align: center;
+    font-family: "Courier New", monospace;
+}
+
+.indicator-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #555;
+}
+.ind-green  { background: #00cc44; box-shadow: 0 0 6px #00cc44; }
+.ind-amber  { background: #ffaa00; box-shadow: 0 0 6px #ffaa00; }
+.ind-red    { background: #cc2200; box-shadow: 0 0 4px #cc2200; }
+.ind-off    { background: #1a1a1a; }
+
+/* ── MAIN CONSOLE ── */
+.main-console {
+    display: grid;
+    grid-template-columns: 180px 1fr 1fr 180px;
+    background: #1e1e1e;
+    border-top: 4px solid #333;
+    min-height: 260px;
+}
+
+/* ── SIDE PANELS (orange/wood trim) ── */
+.side-panel {
+    background: linear-gradient(to bottom, #8b4c1a, #6b3610, #8b4c1a);
+    padding: 14px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 3px solid #c06020;
+    position: relative;
+}
+
+.side-panel::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #d07030, #a05020, #d07030);
+}
+
+.side-panel-left::before  { right: 0; }
+.side-panel-right::before { left: 0; }
+
+.panel-label {
+    font-size: 0.6rem;
+    color: #c88040;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-bottom: 1px solid #a06030;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+    font-family: "Courier New", monospace;
+}
+
+/* Cockpit buttons */
+.cab-btn {
+    display: block;
+    background: linear-gradient(to bottom, #3a3a3a, #2a2a2a);
+    border: 1px solid #555;
+    border-bottom: 3px solid #111;
+    border-radius: 3px;
+    color: #ddd;
+    font-size: 0.62rem;
+    font-family: "Courier New", monospace;
+    letter-spacing: 0.04em;
+    padding: 5px 6px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.1s;
+    width: 100%;
+}
+
+.cab-btn:hover {
+    background: linear-gradient(to bottom, #4a4a4a, #3a3a3a);
+    color: #fff;
+    border-color: #888;
+}
+
+.cab-btn:active {
+    background: linear-gradient(to bottom, #2a2a2a, #3a3a3a);
+    border-bottom-width: 1px;
+    transform: translateY(2px);
+}
+
+.cab-btn-danger {
+    background: linear-gradient(to bottom, #5a1a1a, #3a0a0a);
+    border-color: #882222;
+    color: #ff8888;
+}
+
+.cab-btn-danger:hover {
+    background: linear-gradient(to bottom, #7a2a2a, #5a1a1a);
+    color: #ffaaaa;
+}
+
+.cab-btn-green {
+    background: linear-gradient(to bottom, #1a4a1a, #0a2a0a);
+    border-color: #228822;
+    color: #88ff88;
+}
+
+.cab-btn-green:hover {
+    background: linear-gradient(to bottom, #2a6a2a, #1a4a1a);
+    color: #aaffaa;
+}
+
+/* ── INSTRUMENT SCREENS ── */
+.screen-panel {
+    background: #111;
+    margin: 10px 8px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.screen-header {
+    background: #0a0a0a;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 4px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.screen-header-title {
+    font-size: 0.6rem;
+    color: #00aaff;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+
+.screen-header-time {
+    font-size: 0.6rem;
+    color: #444;
+}
+
+.screen-body {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Stat rows on left screen */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 4px 0;
+}
+
+.stat-key {
+    font-size: 0.65rem;
+    color: #668888;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.stat-val {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #00ffaa;
+    text-shadow: 0 0 6px #00aa66;
+    min-width: 50px;
+    text-align: right;
+}
+
+.stat-val-cop {
+    color: #ffaa00;
+    text-shadow: 0 0 6px #ff6600;
+}
+
+/* Cops list on right screen */
+.cops-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #1a1a1a;
+    padding: 3px 0;
+    gap: 8px;
+}
+
+.cops-num {
+    font-size: 0.75rem;
+    color: #ffaa00;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.cops-loc {
+    font-size: 0.65rem;
+    color: #668888;
+    flex: 1;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cops-date {
+    font-size: 0.6rem;
+    color: #444;
+    min-width: 70px;
+    text-align: right;
+}
+
+.cops-empty {
+    font-size: 0.7rem;
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+/* ── BOTTOM CONSOLE STRIP ── */
+.bottom-strip {
+    background: linear-gradient(to bottom, #252525, #1a1a1a);
+    border-top: 3px solid #333;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.switch-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.toggle-switch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+
+.toggle-label {
+    font-size: 0.5rem;
+    color: #556;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.toggle-body {
+    width: 28px;
+    height: 14px;
+    background: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 7px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-body.on { background: #003a20; border-color: #006633; }
+
+.toggle-knob {
+    width: 12px;
+    height: 12px;
+    background: #888;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: left 0.15s;
+}
+
+.toggle-body.on .toggle-knob {
+    left: 15px;
+    background: #00cc44;
+    box-shadow: 0 0 4px #00cc44;
+}
+
+.status-bar {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.status-item {
+    font-size: 0.6rem;
+    color: #446;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.status-item span {
+    color: #00aaff;
+    margin-left: 4px;
+}
+
+/* ── GAUGE CLUSTER (centre bottom) ── */
+.gauge-cluster {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    background: #111;
+    border: 1px solid #2a2a2a;
+    border-radius: 4px;
+}
+
+.mini-gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.gauge-circle {
+    width: 44px;
+    height: 44px;
+}
+
+.gauge-label {
+    font-size: 0.5rem;
+    color: #446;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    max-width: 50px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="tt-page-header">
+  <div>
+    <div class="tt-page-label">System</div>
+    <h1 class="tt-page-title">Driver's Cab</h1>
+  </div>
+  <div class="tt-page-actions">
+    <a href="{{ url_for('admin.admin_settings') }}" class="tt-btn tt-btn-outline">Settings</a>
+    <a href="{{ url_for('main.dashboard') }}" class="tt-btn tt-btn-outline">Exit Cab</a>
+  </div>
+</div>
+
+<div class="cockpit">
+
+  <!-- WINDSCREEN -->
+  <div class="windscreen-frame">
+    <div class="windscreen-pillar-left"></div>
+    <div class="windscreen-glass cockpit-view">
+      <div class="wiper wiper-left"></div>
+      <div class="wiper wiper-right"></div>
+    </div>
+    <div class="windscreen-pillar-right"></div>
+  </div>
+
+  <!-- CONSOLE TOP BAR -->
+  <div class="console-top">
+    <div class="indicator-row">
+      <div class="indicator ind-green"></div>
+      <div class="indicator ind-green"></div>
+      <div class="indicator ind-amber"></div>
+      <div class="indicator ind-off"></div>
+      <div class="indicator ind-off"></div>
+    </div>
+
+    <div class="display-amber">
+      {% if settings.get('Callsign') %}{{ settings.get('Callsign') }}
+      {% elif settings.get('FirstName') %}{{ settings.get('FirstName') }} {{ settings.get('LastName') }}
+      {% else %}TRAINTRACK{% endif %}
+    </div>
+
+    <div class="indicator-row">
+      <div class="indicator ind-off"></div>
+      <div class="indicator ind-red"></div>
+      <div class="indicator ind-off"></div>
+      <div class="indicator ind-green"></div>
+      <div class="indicator ind-green"></div>
+    </div>
+  </div>
+
+  <!-- MAIN CONSOLE -->
+  <div class="main-console">
+
+    <!-- LEFT PANEL — actions -->
+    <div class="side-panel side-panel-left">
+      <div class="panel-label">Operations</div>
+      <a href="{{ url_for('sighting.log') }}"   class="cab-btn cab-btn-green">Log Sighting</a>
+      <a href="{{ url_for('locomotive.add') }}" class="cab-btn">Add Locomotive</a>
+      <a href="{{ url_for('formation.add') }}"  class="cab-btn">Add Formation</a>
+      <a href="{{ url_for('location.add') }}"   class="cab-btn">Add Location</a>
+      <a href="{{ url_for('operator.add') }}"   class="cab-btn">Add Operator</a>
+      <div class="panel-label" style="margin-top:6px;">Database</div>
+      <form method="post" action="{{ url_for('backup_database') }}" style="margin:0;">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" class="cab-btn">Backup DB</button>
+      </form>
+      <form method="post" action="{{ url_for('flush_database') }}"
+            onsubmit="return confirm('FLUSH ALL DATA — are you sure?');" style="margin:0;">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <input type="hidden" name="confirm_flush" value="CONFIRM">
+        <button type="submit" class="cab-btn cab-btn-danger">Flush Database</button>
+      </form>
+    </div>
+
+    <!-- LEFT SCREEN — stats -->
+    <div class="screen-panel">
+      <div class="screen-header">
+        <span class="screen-header-title">System Status</span>
+        <span class="screen-header-time" id="cab-clock">--:--:--</span>
+      </div>
+      <div class="screen-body">
+        <div class="stat-row">
+          <span class="stat-key">Locomotives</span>
+          <span class="stat-val">{{ stats.locomotives if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Formations</span>
+          <span class="stat-val">{{ stats.formations if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Total Sightings</span>
+          <span class="stat-val">{{ stats.sightings if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Cops</span>
+          <span class="stat-val stat-val-cop">{{ stats.cops if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Dubs</span>
+          <span class="stat-val">{{ stats.dubs if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Operators</span>
+          <span class="stat-val">{{ stats.operators if stats else 0 }}</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-key">Locations</span>
+          <span class="stat-val">{{ stats.locations if stats else 0 }}</span>
+        </div>
+        <div class="stat-row" style="border:none;margin-top:auto;">
+          <span class="stat-key">Version</span>
+          <span style="font-size:0.6rem;color:#446;">{{ TRAINTRACK_DISPLAY_VERSION }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SCREEN — recent cops -->
+    <div class="screen-panel">
+      <div class="screen-header">
+        <span class="screen-header-title">Recent Cops</span>
+        <a href="{{ url_for('reports.cops_list') }}" style="font-size:0.55rem;color:#446;text-decoration:none;">VIEW ALL</a>
+      </div>
+      <div class="screen-body">
+        {% if recent_cops %}
+          {% for cop in recent_cops %}
+          <div class="cops-row">
+            <span class="cops-num">{{ cop.loco_number }}</span>
+            <span class="cops-loc">{{ cop.location_name or '—' }}</span>
+            <span class="cops-date">{{ cop.cop_date }}</span>
+          </div>
+          {% endfor %}
+        {% else %}
+          <div class="cops-empty">No cops logged yet.<br>Get out there!</div>
+        {% endif %}
+        <div style="margin-top:auto;">
+          <a href="{{ url_for('reports.needs_cops') }}"
+             style="font-size:0.6rem;color:#446;text-decoration:none;display:block;text-align:center;padding-top:8px;border-top:1px solid #1a1a1a;">
+            NEEDS COPS &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL — system controls -->
+    <div class="side-panel side-panel-right">
+      <div class="panel-label">Reports</div>
+      <a href="{{ url_for('reports.index') }}"      class="cab-btn">Stats Overview</a>
+      <a href="{{ url_for('reports.cops_list') }}"  class="cab-btn">Cops List</a>
+      <a href="{{ url_for('reports.needs_cops') }}" class="cab-btn">Needs Cops</a>
+      <a href="{{ url_for('sighting.index') }}?cops=1" class="cab-btn">Recent Cops</a>
+      <div class="panel-label" style="margin-top:6px;">Reference</div>
+      <a href="{{ url_for('locomotive.index') }}" class="cab-btn">Locomotives</a>
+      <a href="{{ url_for('formation.index') }}"  class="cab-btn">Formations</a>
+      <a href="{{ url_for('operator.index') }}"   class="cab-btn">Operators</a>
+      <a href="{{ url_for('location.index') }}"   class="cab-btn">Locations</a>
+    </div>
+
+  </div><!-- /main-console -->
+
+  <!-- BOTTOM STRIP -->
+  <div class="bottom-strip">
+    <div class="switch-group">
+      <div class="toggle-switch">
+        <span class="toggle-label">Power</span>
+        <div class="toggle-body on"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="toggle-switch">
+        <span class="toggle-label">DB Link</span>
+        <div class="toggle-body on"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="toggle-switch">
+        <span class="toggle-label">Backup</span>
+        <div class="toggle-body"><div class="toggle-knob"></div></div>
+      </div>
+      <div class="toggle-switch">
+        <span class="toggle-label">Sync</span>
+        <div class="toggle-body"><div class="toggle-knob"></div></div>
+      </div>
+    </div>
+
+    <!-- GAUGE CLUSTER -->
+    <div class="gauge-cluster">
+      {% set total = (stats.sightings if stats else 0)|int %}
+      {% set cops  = (stats.cops if stats else 0)|int %}
+      {% set pct   = ((cops / total * 100) if total > 0 else 0)|int %}
+
+      {% macro gauge(value, max_val, label, color) %}
+      {% set angle = [((value / max_val) * 240 - 120), 120]|min %}
+      {% set rad   = angle * 3.14159 / 180 %}
+      <div class="mini-gauge">
+        <svg class="gauge-circle" viewBox="0 0 44 44">
+          <circle cx="22" cy="22" r="18" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+          <circle cx="22" cy="22" r="18" fill="none" stroke="#2a2a2a" stroke-width="3"
+                  stroke-dasharray="113" stroke-dashoffset="0"
+                  stroke-linecap="round" transform="rotate(-210 22 22)"/>
+          <circle cx="22" cy="22" r="18" fill="none" stroke="{{ color }}" stroke-width="3"
+                  stroke-dasharray="{{ [((value / max_val if max_val > 0 else 0) * 113)|int, 113]|min }} 113"
+                  stroke-linecap="round" transform="rotate(-210 22 22)"/>
+          <text x="22" y="25" text-anchor="middle" font-size="9" fill="{{ color }}"
+                font-family="Courier New" font-weight="bold">{{ value }}</text>
+        </svg>
+        <span class="gauge-label">{{ label }}</span>
+      </div>
+      {% endmacro %}
+
+      {{ gauge(stats.locomotives if stats else 0, [stats.locomotives if stats else 1, 1]|max, 'Locos', '#00ffaa') }}
+      {{ gauge(stats.cops if stats else 0, [stats.sightings if stats else 1, 1]|max, 'Cops', '#ffaa00') }}
+      {{ gauge(stats.sightings if stats else 0, [stats.sightings if stats else 1, 1]|max, 'Sightings', '#00aaff') }}
+    </div>
+
+    <div class="status-bar">
+      <div class="status-item">Role<span>{{ TRAINTRACK_ROLE }}</span></div>
+      <div class="status-item">DB<span style="color:#00cc44;">ONLINE</span></div>
+      <div class="status-item">Ver<span>1.0.0</span></div>
+    </div>
+  </div>
+
+</div><!-- /cockpit -->
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+function updateClock() {
+    const now = new Date();
+    const t = now.toTimeString().split(' ')[0];
+    const el = document.getElementById('cab-clock');
+    if (el) el.textContent = t;
+}
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+{% endblock %}

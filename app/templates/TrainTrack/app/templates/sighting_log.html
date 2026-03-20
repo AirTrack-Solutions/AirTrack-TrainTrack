@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Log Sighting{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div><div class="tt-page-label"><a href="{{ url_for('sighting.index') }}">Sightings</a> / Log</div><h1 class="tt-page-title">Log a Sighting</h1></div>
+</div>
+<div class="tt-content-card">
+  <form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <div style="margin-bottom:16px;">
+      <strong style="color:#7a1a0a;">What did you see?</strong><br>
+      <label style="margin-right:20px;"><input type="radio" name="subject_type" value="locomotive" checked onchange="toggleSubject(this.value)"> Locomotive</label>
+      <label><input type="radio" name="subject_type" value="formation" onchange="toggleSubject(this.value)"> Formation (Multiple Unit)</label>
+    </div>
+    <div class="tt-form-grid">
+      <div class="tt-form-group" id="loco-field"><label>Locomotive *</label><select name="locomotive_id"><option value="">— Select locomotive —</option>{% for l in locomotives %}<option value="{{ l.id }}">{{ l.number }}{% if l.name %} — {{ l.name }}{% endif %}</option>{% endfor %}</select></div>
+      <div class="tt-form-group" id="formation-field" style="display:none;"><label>Formation *</label><select name="formation_id"><option value="">— Select formation —</option>{% for f in formations %}<option value="{{ f.id }}">{{ f.set_number }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Date *</label><input type="date" name="sighting_date" required></div>
+      <div class="tt-form-group"><label>Time</label><input type="time" name="sighting_time"></div>
+      <div class="tt-form-group"><label>Location</label><select name="location_id"><option value="">— Select location —</option>{% for loc in locations %}<option value="{{ loc.id }}">{{ loc.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>Working / Headcode</label><input type="text" name="working" placeholder="e.g. 1A01 or 6M65"></div>
+      <div class="tt-form-group"><label>Direction</label><select name="direction"><option value="">— Optional —</option><option>Up</option><option>Down</option><option>Northbound</option><option>Southbound</option><option>Eastbound</option><option>Westbound</option><option>On shed</option><option>Stabled</option></select></div>
+      <div class="tt-form-group" id="hauled-by-field" style="display:none;"><label>Hauled By</label><select name="hauled_by"><option value="">— None / self-propelled —</option>{% for l in locomotives %}<option value="{{ l.id }}">{{ l.number }}{% if l.name %} — {{ l.name }}{% endif %}</option>{% endfor %}</select></div>
+      <div class="tt-form-group" style="grid-column:1/-1;"><label>Notes</label><textarea name="notes" rows="2" placeholder="Anything worth noting…"></textarea></div>
+    </div>
+    <div class="tt-form-actions">
+      <button type="submit" class="tt-btn tt-btn-primary">🚂 Log Sighting</button>
+      <a href="{{ url_for('sighting.index') }}" class="tt-btn tt-btn-outline">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+function toggleSubject(val) {
+  document.getElementById('loco-field').style.display      = val === 'locomotive' ? '' : 'none';
+  document.getElementById('formation-field').style.display = val === 'formation'  ? '' : 'none';
+  document.getElementById('hauled-by-field').style.display = val === 'formation'  ? '' : 'none';
+}
+document.querySelector('input[name="sighting_date"]').value = new Date().toISOString().split('T')[0];
+</script>
+{% endblock %}

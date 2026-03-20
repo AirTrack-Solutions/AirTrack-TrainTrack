@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Formations{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div><div class="tt-page-label">Fleet</div><h1 class="tt-page-title">Formations ({{ total }})</h1></div>
+  <div class="tt-page-actions"><a href="{{ url_for('formation.add') }}" class="tt-btn tt-btn-primary">+ Add Formation</a></div>
+</div>
+<table class="tt-table">
+  <thead><tr><th>Set Number</th><th>Class</th><th>Operator</th><th>Vehicles</th><th>Status</th><th>Sightings</th><th>Actions</th></tr></thead>
+  <tbody>
+    {% for f in formations %}
+    <tr>
+      <td><a href="{{ url_for('formation.detail', formation_id=f.id) }}"><strong>{{ f.set_number }}</strong></a></td>
+      <td>{{ f.class_name or '—' }}</td>
+      <td>{{ f.operator_name or '—' }}</td>
+      <td>{{ f.vehicle_count }}</td>
+      <td><span class="tt-badge tt-badge-{{ f.status }}">{{ f.status|capitalize }}</span></td>
+      <td>{{ f.sighting_count }}</td>
+      <td>
+        <a href="{{ url_for('formation.detail', formation_id=f.id) }}" class="tt-btn tt-btn-info">Info</a>
+        <form method="post" action="{{ url_for('formation.delete', formation_id=f.id) }}"
+              onsubmit="return confirm('Delete {{ f.set_number }}?');" style="display:inline;">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <button type="submit" class="tt-btn tt-btn-danger">Delete</button>
+        </form>
+      </td>
+    </tr>
+    {% else %}
+    <tr><td colspan="7" style="text-align:center;padding:20px;color:#666;">No formations yet.</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% if pages > 1 %}
+<div class="tt-pagination">
+  {% for p in range(1, pages + 1) %}
+    {% if p == page %}<span class="current">{{ p }}</span>
+    {% else %}<a href="?page={{ p }}&q={{ search }}">{{ p }}</a>{% endif %}
+  {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

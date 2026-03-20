@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}404{% endblock %}
+{% block content %}
+<div style="text-align:center;padding:6rem 2rem;">
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:6rem;font-weight:800;color:var(--card-border);">404</div>
+  <h2 style="font-family:'Barlow Condensed',sans-serif;font-size:2rem;margin-bottom:1rem;">Page not found</h2>
+  <p style="color:var(--muted);margin-bottom:2rem;">That train has already left the station.</p>
+  <a href="{{ url_for('main.dashboard') }}" class="tt-btn tt-btn-primary">Back to Dashboard</a>
+</div>
+{% endblock %}

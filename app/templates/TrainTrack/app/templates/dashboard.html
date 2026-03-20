@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+
+<div class="tt-page-header">
+  <div>
+    <div class="tt-page-label">Overview</div>
+    <h1 class="tt-page-title">Dashboard</h1>
+  </div>
+  <div class="tt-page-actions">
+    <a href="{{ url_for('sighting.log') }}" class="tt-btn tt-btn-primary">+ Log Sighting</a>
+    <a href="{{ url_for('locomotive.add') }}" class="tt-btn tt-btn-outline">+ Add Locomotive</a>
+  </div>
+</div>
+
+<!-- STATS ROW -->
+<div class="tt-row">
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">Locomotives: {{ stats.locomotives }}</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">Formations: {{ stats.formations }}</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">🚂 Cops: {{ stats.cops }}</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">Dubs: {{ stats.dubs }}</div></div></div>
+  <div class="tt-col"><div class="tt-card"><div class="tt-card-title">Total Sightings: {{ stats.sightings }}</div></div></div>
+</div>
+
+<!-- QUICK LINKS -->
+<div class="tt-row">
+  <div class="tt-col">
+    <div class="tt-content-card">
+      <h3>Quick Actions</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ url_for('sighting.log') }}"   class="tt-btn tt-btn-primary">🚂 Log a Sighting</a>
+        <a href="{{ url_for('locomotive.add') }}" class="tt-btn tt-btn-outline">Add Locomotive</a>
+        <a href="{{ url_for('formation.add') }}"  class="tt-btn tt-btn-outline">Add Formation</a>
+        <a href="{{ url_for('location.add') }}"   class="tt-btn tt-btn-outline">Add Location</a>
+        <a href="{{ url_for('operator.add') }}"   class="tt-btn tt-btn-outline">Add Operator</a>
+      </div>
+    </div>
+  </div>
+  <div class="tt-col">
+    <div class="tt-content-card">
+      <h3>Reports</h3>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <a href="{{ url_for('reports.index') }}"      class="tt-btn tt-btn-outline">📊 Stats Overview</a>
+        <a href="{{ url_for('reports.cops_list') }}"  class="tt-btn tt-btn-outline">🏆 Full Cops List</a>
+        <a href="{{ url_for('reports.needs_cops') }}" class="tt-btn tt-btn-outline">🎯 Needs Cops</a>
+        <a href="{{ url_for('sighting.index') }}?cops=1" class="tt-btn tt-btn-outline">Recent Cops</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
