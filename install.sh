@@ -10,6 +10,7 @@ echo " This may take several minutes. Please be patient."
 echo ""
 read -p " Press Enter to continue..."
 echo ""
+[ ! -f .env ] && cp .env.example .env
 echo " Building TrainTrack..."
 docker compose -f docker-compose.client.yml up --build -d
 if [ $? -ne 0 ]; then

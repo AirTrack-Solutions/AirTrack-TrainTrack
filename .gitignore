@@ -40,3 +40,4 @@ EOF
 app/static/css/themes.css
 docker-compose.server.yml
 .env.server
+!.env.example

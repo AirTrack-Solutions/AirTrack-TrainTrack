@@ -10,6 +10,7 @@ echo  This may take several minutes. Please be patient.
 echo.
 pause
 echo.
+if not exist .env copy .env.example .env
 echo  Building TrainTrack...
 docker compose -f docker-compose.client.yml up --build -d
 if %errorlevel% neq 0 (
