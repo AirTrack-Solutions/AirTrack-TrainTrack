@@ -1,0 +1,66 @@
+services:
+  traintrack:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    image: traintrack:server
+    container_name: traintrack
+    working_dir: /app
+    entrypoint: ["/bin/sh", "/app/wait-for-mariadb.sh"]
+    command:
+      [
+        "gunicorn",
+        "-w", "2",
+        "-k", "gthread", "--threads", "8",
+        "-b", "0.0.0.0:5000",
+        "wsgi:app"
+      ]
+    ports:
+      - "5001:5000"
+    env_file:
+      - .env.server
+    environment:
+      PYTHONUNBUFFERED: "1"
+      PYTHONPATH: "/app"
+      FLASK_DEBUG: "0"
+      TRAINTRACK_ROLE: "server"
+      TRAINTRACK_UPDATE_MODE: "local"
+      MYSQL_HOST: "traintrack-db"
+      MYSQL_PORT: "3306"
+      WAIT_TIMEOUT: "60"
+    stop_signal: SIGTERM
+    stop_grace_period: 20s
+    volumes:
+      - ./app:/app:rw
+      - ./app/logs:/app/logs:rw
+      - ./app/static:/app/static:rw
+      - ./app/backups:/app/backups:rw
+      - ./app/config:/app/config:rw
+    user: "${UID:-1000}:${GID:-1000}"
+    depends_on:
+      traintrack-db:
+        condition: service_healthy
+
+  traintrack-db:
+    image: mariadb:11.4
+    container_name: traintrack-db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: "${DB_ROOT_PASSWORD}"
+      MARIADB_DATABASE: "${DB_NAME}"
+      MARIADB_USER: "${DB_USER}"
+      MARIADB_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./mariadb-init:/docker-entrypoint-initdb.d:ro
+      - ./app/backups:/backups
+    ports:
+      - "3308:3306"
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  db_data:

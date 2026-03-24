@@ -304,6 +304,10 @@ from routes.locomotive_routes import locomotive_bp
 from routes.sighting_routes import sighting_bp
 from routes.formation_routes import formation_bp
 from routes.operator_routes import operator_bp
+from routes.class_routes import class_bp
+from routes.depot_routes import depot_bp
+from routes.class_routes import class_bp
+from routes.depot_routes import depot_bp
 from routes.location_routes import location_bp
 from routes.reports_routes import reports_bp
 from routes.admin_routes import admin_bp
@@ -329,6 +333,10 @@ logging.info("✅ Registered blueprint: formation_bp (/formations)")
 app.register_blueprint(operator_bp)
 logging.info("✅ Registered blueprint: operator_bp (/operators)")
 
+app.register_blueprint(class_bp)
+logging.info("✅ Registered blueprint: class_bp (/classes)")
+app.register_blueprint(depot_bp)
+logging.info("✅ Registered blueprint: depot_bp (/depots)")
 app.register_blueprint(location_bp)
 logging.info("✅ Registered blueprint: location_bp (/locations)")
 

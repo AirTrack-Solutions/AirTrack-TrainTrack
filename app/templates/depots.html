@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Depots{% endblock %}
+{% block content %}
+<div class="tt-page-header">
+  <div>
+    <div class="tt-page-label">Reference Data</div>
+    <h1 class="tt-page-title">Depots</h1>
+  </div>
+  <a href="{{ url_for('depot.add') }}" class="tt-btn tt-btn-primary">+ Add Depot</a>
+</div>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% for category, message in messages %}
+    <div class="tt-flash tt-flash-{{ category }}">{{ message }}</div>
+  {% endfor %}
+{% endwith %}
+
+<div class="tt-content-card">
+  {% if depots %}
+  <table class="tt-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Code</th>
+        <th>Operator</th>
+        <th>Country</th>
+        <th>Locos</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for d in depots %}
+      <tr>
+        <td><strong>{{ d.name }}</strong></td>
+        <td>{{ d.code or '—' }}</td>
+        <td>{{ d.operator_name or '—' }}</td>
+        <td>{{ d.country_name or '—' }}</td>
+        <td><span class="tt-badge">{{ d.loco_count }}</span></td>
+        <td>
+          <form method="post" action="{{ url_for('depot.delete', depot_id=d.id) }}"
+                onsubmit="return confirm('Delete depot {{ d.name }}?')">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="tt-btn tt-btn-danger tt-btn-sm">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="tt-empty">No depots added yet. <a href="{{ url_for('depot.add') }}">Add the first one.</a></p>
+  {% endif %}
+</div>
+{% endblock %}

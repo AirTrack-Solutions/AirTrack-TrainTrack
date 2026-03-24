@@ -1,12 +1,40 @@
+cat > ~/docker/TrainTrack/TrainTrack1/.gitignore << 'EOF'
+# Environment files
 .env
-app/static/themes/*.png
-.env
-app/static/themes/*.png
-.env
-app/static/themes/*.png
-.env
-app/static/themes/*.png
-.env
-app/static/themes/*.png
+.env.server
+.env.client
+.env.*
+
+# License files — never commit
+app/config/license.lic
+*.lic
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+app/__pycache__/
+app/config/__pycache__/
+app/routes/__pycache__/
+app/utils/__pycache__/
+app/models/__pycache__/
+
+# Logs
+app/logs/
+logs/
+
+# Generated theme files
 app/static/themes/themes.json
+app/static/themes/themes.css
+app/static/themes/*.png
+app/static/themes/.themesgen.lock
+
+# Update staging
+app/static/updates/
+updates/
+
+# Seed data (one-time use)
+seed_countries.sql
+EOF
 app/static/css/themes.css
