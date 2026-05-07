@@ -1,0 +1,153 @@
+Hi [Name],
+
+Thank you for purchasing TrainTrack. Your license file is attached to this email.
+
+Follow the steps below to get up and running.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+BEFORE YOU START
+━━━━━━━━━━━━━━━━━━━━━━━
+
+TrainTrack runs inside Docker, which you will need to install first if you haven't already.
+
+Windows: https://www.docker.com/products/docker-desktop
+Linux: Install via your package manager: sudo apt install docker.io docker-compose-plugin
+
+Once Docker is installed and running, you are ready to proceed.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+STEP 1 — DOWNLOAD TRAINTRACK
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Click the link below to download TrainTrack as a ZIP file — no tools or accounts required.
+
+https://github.com/Subhuti/TrainTrack/archive/refs/heads/main.zip
+
+── WINDOWS ──
+
+1. Create a folder for your Docker apps, e.g. C:\docker\TrainTrack
+2. Click the link above to download the ZIP
+3. Right-click the downloaded file and select "Extract All"
+4. Extract the contents into C:\docker\TrainTrack
+
+── LINUX / RASPBERRY PI ──
+
+1. Create a folder for your Docker apps:
+   mkdir -p ~/docker/TrainTrack
+   cd ~/docker/TrainTrack
+
+2. Download the ZIP using wget:
+   wget -O traintrack.zip https://github.com/Subhuti/TrainTrack/archive/refs/heads/main.zip
+
+3. Extract it:
+   unzip traintrack.zip
+
+4. Move the contents into place:
+   mv TrainTrack-main/* .
+   rm -rf TrainTrack-main traintrack.zip
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+STEP 2 — INSTALL YOUR LICENSE
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Copy the attached license.lic file into the config/ folder inside your TrainTrack directory.
+
+Windows example: C:\docker\TrainTrack\app\config\license.lic
+Linux example:   ~/docker/TrainTrack/app/config/license.lic
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+STEP 3 — FIRST TIME SETUP
+━━━━━━━━━━━━━━━━━━━━━━━
+
+── WINDOWS ──
+
+1. Open the TrainTrack folder
+2. Double-click install.bat to run the installer
+3. If Windows asks "Do you want to allow this app to make changes?" click Yes
+4. Wait for the build to complete — this may take a few minutes the first time
+5. Your browser will open automatically at http://localhost:5001 when ready
+
+── LINUX / RASPBERRY PI ──
+
+1. Open a terminal and navigate to your TrainTrack folder:
+   cd ~/docker/TrainTrack
+
+2. Make the scripts executable:
+   chmod +x install.sh start.sh stop.sh
+
+3. Run the installer:
+   ./install.sh
+
+4. TrainTrack will be available at http://localhost:5001 when ready
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+STEP 4 — STARTING AND STOPPING
+━━━━━━━━━━━━━━━━━━━━━━━
+
+After the first install, use these scripts to start and stop TrainTrack:
+
+── WINDOWS ──
+start.bat  — Starts TrainTrack and opens your browser
+stop.bat   — Stops TrainTrack
+
+── LINUX / RASPBERRY PI ──
+./start.sh — Starts TrainTrack
+./stop.sh  — Stops TrainTrack
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+STEP 5 — CREATE A DESKTOP SHORTCUT (OPTIONAL)
+━━━━━━━━━━━━━━━━━━━━━━━
+
+── WINDOWS ──
+
+1. Right-click start.bat and select "Send to" → "Desktop (create shortcut)"
+2. Right-click the shortcut and select "Properties"
+3. Click "Change Icon" to personalise it
+4. Double-clicking the shortcut will start TrainTrack and open your browser
+
+── LINUX ──
+
+1. Create a file called TrainTrack.desktop on your Desktop
+2. Paste the following (adjust the path to match your install location):
+
+[Desktop Entry]
+Name=TrainTrack
+Exec=/home/yourusername/traintrack/start.sh
+Icon=/home/yourusername/traintrack/app/static/images/TrainTrack_Logo.png
+Terminal=true
+Type=Application
+
+3. Right-click the file and select "Allow Launching"
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+ADVANCED — FOR DEVELOPERS ONLY
+━━━━━━━━━━━━━━━━━━━━━━━
+
+If you prefer to clone the repository rather than download the ZIP:
+
+HTTPS:  https://github.com/Subhuti/TrainTrack.git
+SSH:    git@github.com:Subhuti/TrainTrack.git
+
+
+━━━━━━━━━━━━━━━━━━━━━━━
+NEED HELP?
+━━━━━━━━━━━━━━━━━━━━━━━
+
+Full documentation and FAQs are available at:
+https://www.airtracksolutions.com/faqs.html
+
+Or contact us directly at:
+https://www.airtracksolutions.com/contact.html
+
+Welcome aboard, and happy train spotting.
+
+Trevor
+AirTrack Solutions
+https://www.airtracksolutions.com

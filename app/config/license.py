@@ -1,13 +1,16 @@
-# TrainTrack 1.0.0 "Stephenson" — Release 1
-# Copyright (c) 2025 Trevor ("Subhuti"). All rights reserved.
+# TrainTrack 1.0.0 'Stephenson' — Release 1
+# Copyright (c) 2025 Trevor ('Subhuti'). All rights reserved.
 # SPDX-License-Identifier: LicenseRef-TrainTrack-Proprietary-NC
 
 # config/license.py
 # Reads license.lic from app/config/ and exposes edition and license info.
 
 import json
+
 import logging
+
 import os
+
 from pathlib import Path
 
 # Edition hierarchy — higher index = more features

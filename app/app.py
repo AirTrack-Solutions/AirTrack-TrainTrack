@@ -14,6 +14,7 @@ import logging
 import os
 import subprocess
 import sys
+import threading
 
 from datetime import datetime
 from logging.handlers import RotatingFileHandler
@@ -113,6 +114,52 @@ jinja_filters.register_filters(app)
 app.jinja_env.globals['csrf_token'] = generate_csrf
 app.jinja_env.globals['get_country_flag'] = get_country_flag
 app.jinja_env.globals['time'] = time
+
+# ---------------------------------------------------------------------------
+# Update state (cached at startup, refreshed on demand)
+# ---------------------------------------------------------------------------
+_update_state = {
+    "up_to_date": True,
+    "files_needing_update": [],
+    "remote_version": None,
+    "local_version": None,
+    "checked": False,
+    "error": None,
+}
+_update_lock = threading.Lock()
+
+
+def _run_update_check():
+    """Run update check in a background thread and cache the result."""
+    global _update_state
+    if os.getenv("TRAINTRACK_ROLE", "client") != "client":
+        return
+    try:
+        from utils.traintrack_updater import check_for_updates
+        result = check_for_updates()
+        with _update_lock:
+            _update_state.update({
+                "up_to_date": result.get("up_to_date", True),
+                "files_needing_update": result.get("files_needing_update", []),
+                "remote_version": result.get("remote_version"),
+                "local_version": result.get("local_version"),
+                "checked": True,
+                "error": result.get("error"),
+            })
+        logging.info(
+            "✅ Update check complete — up_to_date=%s remote=%s",
+            _update_state["up_to_date"],
+            _update_state["remote_version"],
+        )
+    except Exception as e:
+        with _update_lock:
+            _update_state["checked"] = True
+            _update_state["error"] = str(e)
+        logging.warning("⚠ Update check failed: %s", e)
+
+
+# Fire the check in a daemon thread so startup isn't blocked
+threading.Thread(target=_run_update_check, daemon=True).start()
 
 # ---------------------------------------------------------------------------
 # Context processors

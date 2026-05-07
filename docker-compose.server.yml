@@ -16,7 +16,7 @@ services:
         "wsgi:app"
       ]
     ports:
-      - "5001:5000"
+      - "5002:5000"
     env_file:
       - .env.server
     environment:
