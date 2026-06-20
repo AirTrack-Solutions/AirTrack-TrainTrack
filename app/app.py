@@ -353,8 +353,6 @@ from routes.formation_routes import formation_bp
 from routes.operator_routes import operator_bp
 from routes.class_routes import class_bp
 from routes.depot_routes import depot_bp
-from routes.class_routes import class_bp
-from routes.depot_routes import depot_bp
 from routes.location_routes import location_bp
 from routes.reports_routes import reports_bp
 from routes.admin_routes import admin_bp
