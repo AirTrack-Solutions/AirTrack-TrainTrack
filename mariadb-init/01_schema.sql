@@ -222,6 +222,7 @@ INSERT IGNORE INTO app_settings (SettingKey, SettingValue) VALUES
     ('LastName',    ''),
     ('Callsign',    ''),
     ('timezone',    'UTC'),
-    ('Theme',       'default');
+    ('Theme',       'default'),
+    ('region_profile', 'AU');
 
 SET foreign_key_checks = 1;
