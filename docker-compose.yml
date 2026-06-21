@@ -13,6 +13,8 @@ services:
       - ./app/static:/app/static
       - ./app/routes:/app/routes
       - ./app/utils:/app/utils
+      - ./app/tools:/app/tools
+      - ./research:/app/research
       - app_data:/app/data
       - logs:/app/logs
       - backups:/app/backups
