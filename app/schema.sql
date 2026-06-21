@@ -52,6 +52,10 @@ CREATE TABLE IF NOT EXISTS operators (
     FOREIGN KEY (country_code) REFERENCES countries(code) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- Unknown operator — placeholder for locomotives with no known operator.
+-- Must remain id=1 (first INSERT into operators on a fresh schema).
+INSERT IGNORE INTO operators (name, code, type) VALUES ('Unknown', 'UNK', 'other');
+
 -- ---------------------------------------------------------------------------
 -- depots
 -- ---------------------------------------------------------------------------
@@ -92,20 +96,20 @@ CREATE TABLE IF NOT EXISTS locomotives (
     name            VARCHAR(150) DEFAULT NULL,   -- named locos e.g. "Flying Scotsman"
     class_id        INT UNSIGNED DEFAULT NULL,
     type_id         INT UNSIGNED DEFAULT NULL,
-    operator_id     INT UNSIGNED DEFAULT NULL,
+    operator_id     INT UNSIGNED NOT NULL DEFAULT 1,  -- 1=Unknown operator
     depot_id        INT UNSIGNED DEFAULT NULL,
     livery          VARCHAR(100) DEFAULT NULL,
     built_year      YEAR         DEFAULT NULL,
-    status          ENUM('active','withdrawn','preserved','stored','scrapped') DEFAULT 'active',
+    status          ENUM('active','withdrawn','preserved','stored','scrapped','maintenance','transferred') DEFAULT 'active',
     country_code    CHAR(2)      DEFAULT NULL,
     notes           TEXT         DEFAULT NULL,
     image           VARCHAR(255) DEFAULT NULL,
     date_added      DATETIME     DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
-    UNIQUE KEY uq_loco_number (number),
+    UNIQUE KEY uq_loco_identity (country_code, operator_id, number),  -- operator+country+number is unique, not number alone
     FOREIGN KEY (class_id)     REFERENCES classes(id)    ON DELETE SET NULL,
     FOREIGN KEY (type_id)      REFERENCES types(id)      ON DELETE SET NULL,
-    FOREIGN KEY (operator_id)  REFERENCES operators(id)  ON DELETE SET NULL,
+    FOREIGN KEY (operator_id)  REFERENCES operators(id)  ON DELETE RESTRICT,  -- cannot delete operator with locomotives
     FOREIGN KEY (depot_id)     REFERENCES depots(id)     ON DELETE SET NULL,
     FOREIGN KEY (country_code) REFERENCES countries(code) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -118,7 +122,7 @@ CREATE TABLE IF NOT EXISTS formations (
     set_number  VARCHAR(50)  NOT NULL,
     class_id    INT UNSIGNED DEFAULT NULL,
     operator_id INT UNSIGNED DEFAULT NULL,
-    status      ENUM('active','withdrawn','stored','scrapped') DEFAULT 'active',
+    status      ENUM('active','withdrawn','preserved','stored','scrapped','maintenance','transferred') DEFAULT 'active',
     notes       TEXT         DEFAULT NULL,
     date_added  DATETIME     DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id),
@@ -222,6 +226,7 @@ INSERT IGNORE INTO app_settings (SettingKey, SettingValue) VALUES
     ('LastName',    ''),
     ('Callsign',    ''),
     ('timezone',    'UTC'),
-    ('Theme',       'default');
+    ('Theme',       'default'),
+    ('region_profile', 'AU');
 
 SET foreign_key_checks = 1;
