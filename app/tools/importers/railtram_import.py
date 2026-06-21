@@ -234,7 +234,30 @@ def run_import(
     cur  = conn.cursor()
 
     # ------------------------------------------------------------------
-    # 4. Load current DB state
+    # 4. Pre-flight: verify country code exists in DB
+    # ------------------------------------------------------------------
+    seed_cc = seed.get("source", {}).get("country_code", "AU")
+    cur.execute("SELECT code FROM countries WHERE code = %s", (seed_cc,))
+    cc_in_db = cur.fetchone() is not None
+    if not cc_in_db:
+        if apply:
+            # Hard stop — do not write with NULL country_code; idempotency breaks.
+            conn.close()
+            print(f"ERROR: country_code '{seed_cc}' is not present in the countries table.")
+            print(f"       Seed the country before applying the import:")
+            print(f"         INSERT INTO countries (code, name) VALUES ('{seed_cc}', '<name>');")
+            print(f"       Then re-run with --apply.")
+            print()
+            return 1
+        else:
+            print(f"  WARNING: country code '{seed_cc}' not found in countries table.")
+            print(f"           In --apply mode this would be a hard stop.")
+            print(f"           Add '{seed_cc}' to countries before running --apply.")
+            print()
+    resolved_cc = seed_cc if cc_in_db else None
+
+    # ------------------------------------------------------------------
+    # 5. Load current DB state
     # ------------------------------------------------------------------
     op_map    = _load_operators(cur)    # code -> id
     class_map = _load_classes(cur)      # name.lower() -> id
@@ -268,7 +291,7 @@ def run_import(
         elif op_code in ops_to_create:
             resolved_op_id = -1  # new, real id unknown at plan time
         else:
-            ops_to_create[op_code] = (op_name, op_code, cc)
+            ops_to_create[op_code] = (op_name, op_code, cc)  # cc resolved at apply time
             resolved_op_id = -1
 
         # --- class ---
@@ -424,7 +447,7 @@ def run_import(
 
     for code, (name, _, cc) in ops_to_create.items():
         try:
-            new_id = _create_operator(cur, name, code, cc)
+            new_id = _create_operator(cur, name, code, resolved_cc)
             created_ops[code] = new_id
             op_map[code] = new_id
             if verbose:
@@ -437,7 +460,7 @@ def run_import(
     # ------------------------------------------------------------------
     for cls_key, cls_name in cls_to_create.items():
         try:
-            new_id = _create_class(cur, cls_name, "AU")
+            new_id = _create_class(cur, cls_name, resolved_cc)
             created_cls[cls_key] = new_id
             class_map[cls_key] = new_id
             if verbose:
@@ -480,7 +503,7 @@ def run_import(
         cls_id  = class_map.get(cls_key)  # None is fine
 
         try:
-            _create_loco(cur, number, op_id, cls_id, cc)
+            _create_loco(cur, number, op_id, cls_id, resolved_cc)
             created_locos += 1
             if verbose:
                 print(f"  + Loco [{op_code}] {number} (class={cls_name})")
