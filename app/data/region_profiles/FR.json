@@ -1,0 +1,103 @@
+{
+  "region_code": "FR",
+  "region_name": "France",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Engin Moteur",
+    "number":          "Numero",
+    "class":           "Serie",
+    "operator":        "Exploitant",
+    "owner":           "Proprietaire",
+    "depot":           "Depot",
+    "formation":       "Rame",
+    "carriage":        "Voiture",
+    "wagon":           "Wagon",
+    "multiple_unit":   "Automoteur",
+    "livery":          "Livrée",
+    "builder":         "Constructeur",
+    "year_built":      "Annee de Construction",
+    "status":          "Etat",
+    "previous_number": "Ancien Numero",
+    "reporting_mark":  "EVN"
+  },
+
+  "import_aliases": {
+    "number":          ["Numero", "Numero de Serie", "EVN", "UIC Numero", "Number", "No.", "Loco No"],
+    "name":            ["Name", "Nom"],
+    "class":           ["Serie", "Classe", "Type", "Designation", "Series", "Class"],
+    "operator":        ["Exploitant", "Operateur", "Operator", "Railway", "Entreprise Ferroviaire"],
+    "owner":           ["Proprietaire", "Owner", "Titulaire"],
+    "depot":           ["Depot", "Remise", "Centre de Maintenance", "Allocation"],
+    "livery":          ["Livrée", "Livree", "Livrée", "Livery", "Couleur"],
+    "built_year":      ["Annee de Construction", "Annee", "Year Built", "Built", "Build Year", "Mis en Service"],
+    "status":          ["Etat", "Statut", "Status", "Disposition"],
+    "previous_number": ["Ancien Numero", "Previous Number", "Former Number", "Ex No.", "Numerotation Precedente"],
+    "reporting_mark":  ["EVN", "Numero EVN", "UIC Numero", "Numero National"]
+  },
+
+  "status_map": {
+    "En service":               "active",
+    "Actif":                    "active",
+    "Opérationnel":             "active",
+    "Operationnel":             "active",
+    "Active":                   "active",
+    "In Service":               "active",
+    "Operational":              "active",
+    "Remisé":                   "stored",
+    "Remise":                   "stored",
+    "Hors service":             "stored",
+    "En attente":               "stored",
+    "Stored":                   "stored",
+    "Out of Use":               "stored",
+    "Réformé":                  "scrapped",
+    "Reforme":                  "scrapped",
+    "Radie":                    "scrapped",
+    "Radié":                    "scrapped",
+    "Ferraillé":                "scrapped",
+    "Ferraille":                "scrapped",
+    "Scrapped":                 "scrapped",
+    "Withdrawn":                "scrapped",
+    "Condamné":                 "scrapped",
+    "Preserved":                "preserved",
+    "Préservé":                 "preserved",
+    "Preserve":                 "preserved",
+    "Musée":                    "preserved",
+    "Musee":                    "preserved",
+    "Heritage":                 "preserved",
+    "En révision":              "maintenance",
+    "En revision":              "maintenance",
+    "En réparation":            "maintenance",
+    "En reparation":            "maintenance",
+    "Atelier":                  "maintenance",
+    "Under Repair":             "maintenance",
+    "Vendu":                    "transferred",
+    "Cédé":                     "transferred",
+    "Cede":                     "transferred",
+    "Transferred":              "transferred",
+    "Sold":                     "transferred",
+    "Exported":                 "transferred",
+    "Exporté":                  "transferred"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "uic_evn",
+    "secondary_key": "road_number",
+    "format_hint":   "12-digit UIC European Vehicle Number (EVN), e.g. 91 87 0001 001-3 F-SNCF. The Serie (e.g. BB 7200, BB 36000, AGC B 82500) is the class designation."
+  },
+
+  "optional_fields": {
+    "reporting_mark":  false,
+    "previous_number": true,
+    "owner":           true,
+    "uic_evn":         true,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "French railway terminology uses Serie for class. The UIC European Vehicle Number (EVN) is the 12-digit canonical identifier, shared with Germany and all UIC member states. SNCF Voyageurs, SNCF Fret, OUIGO, Eurostar, and regional operators (TER) are the primary operators. Both accented and unaccented forms are included in the status map to handle varied data sources."
+}

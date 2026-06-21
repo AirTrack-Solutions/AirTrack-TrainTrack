@@ -1,0 +1,91 @@
+{
+  "region_code": "USA",
+  "region_name": "United States of America",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Locomotive",
+    "number":          "Road Number",
+    "class":           "Model",
+    "operator":        "Railroad",
+    "owner":           "Owner",
+    "depot":           "Yard / Shop",
+    "formation":       "Consist",
+    "carriage":        "Passenger Car",
+    "wagon":           "Freight Car",
+    "multiple_unit":   "Multiple Unit",
+    "livery":          "Paint Scheme",
+    "builder":         "Manufacturer",
+    "year_built":      "Year Built",
+    "status":          "Status",
+    "previous_number": "Previous Road Number",
+    "reporting_mark":  "Reporting Mark"
+  },
+
+  "import_aliases": {
+    "number":          ["Road Number", "Unit Number", "Unit No", "Unit No.", "Loco No", "Loco No.", "Number", "No.", "Fleet No", "Fleet No."],
+    "name":            ["Name", "Named", "Loco Name"],
+    "class":           ["Model", "Class", "Locomotive Model", "Type", "Model Type", "EMD Model", "GE Model"],
+    "operator":        ["Railroad", "Operator", "Railway", "Line"],
+    "owner":           ["Owner", "Lessee", "Lessor"],
+    "depot":           ["Yard", "Shop", "Home Shop", "Allocation", "Terminal", "Division"],
+    "livery":          ["Paint Scheme", "Livery", "Paint", "Colour Scheme"],
+    "built_year":      ["Year Built", "Built", "Build Year", "Year", "Date Built"],
+    "status":          ["Status", "Disposition", "Current Status"],
+    "previous_number": ["Previous Road Number", "Former Number", "Previous No.", "Ex No.", "Renumbered From"],
+    "reporting_mark":  ["Reporting Mark", "Mark", "AAR Mark", "Railroad Mark"]
+  },
+
+  "status_map": {
+    "Active":           "active",
+    "In Service":       "active",
+    "Operational":      "active",
+    "Revenue Service":  "active",
+    "Leased Out":       "active",
+    "Stored":           "stored",
+    "In Storage":       "stored",
+    "Long Term Storage":"stored",
+    "Out of Service":   "stored",
+    "Awaiting Parts":   "stored",
+    "Retired":          "scrapped",
+    "Scrapped":         "scrapped",
+    "Sold for Scrap":   "scrapped",
+    "Wrecked":          "scrapped",
+    "Preserved":        "preserved",
+    "Museum":           "preserved",
+    "Heritage":         "preserved",
+    "On Display":       "preserved",
+    "Donated":          "preserved",
+    "Rebuilt":          "maintenance",
+    "Remanufactured":   "maintenance",
+    "In Shop":          "maintenance",
+    "Under Repair":     "maintenance",
+    "Shopping":         "maintenance",
+    "Sold":             "transferred",
+    "Transferred":      "transferred",
+    "Leased to":        "transferred",
+    "Traded In":        "transferred",
+    "Exported":         "transferred"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "road_number",
+    "secondary_key": null,
+    "format_hint":   "Road number assigned by the railroad (e.g. BNSF 1234, UP 5678). Reporting mark is typically a 2-4 letter AAR code (BNSF, UP, NS, CSX, CN)."
+  },
+
+  "optional_fields": {
+    "reporting_mark":  true,
+    "previous_number": true,
+    "owner":           false,
+    "uic_evn":         false,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "In US terminology, 'Model' (not 'Class') is the primary fleet designation - values are manufacturer model codes such as SD70ACe, AC4400CW, ES44AC, GP38-2. 'Railroad' is preferred over 'Operator'. Reporting marks are AAR-registered 2-4 letter codes (BNSF, UP, NS, CSX). Owner and railroad are typically the same entity; leasing arrangements are tracked via the owner field when relevant."
+}

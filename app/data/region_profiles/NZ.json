@@ -1,0 +1,86 @@
+{
+  "region_code": "NZ",
+  "region_name": "New Zealand",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Locomotive",
+    "number":          "Road Number",
+    "class":           "Class",
+    "operator":        "Operator",
+    "owner":           "Owner",
+    "depot":           "Depot",
+    "formation":       "Train Set",
+    "carriage":        "Carriage",
+    "wagon":           "Wagon",
+    "multiple_unit":   "Multiple Unit",
+    "livery":          "Livery",
+    "builder":         "Builder",
+    "year_built":      "Year Built",
+    "status":          "Status",
+    "previous_number": "Previous Number",
+    "reporting_mark":  "Reporting Mark"
+  },
+
+  "import_aliases": {
+    "number":          ["Road Number", "Fleet No", "Fleet No.", "Unit No", "Unit No.", "Loco No", "Loco No.", "Number", "No."],
+    "name":            ["Name", "Named", "Loco Name"],
+    "class":           ["Class", "Class Code", "Loco Class"],
+    "operator":        ["Operator", "Operator Code", "Railway"],
+    "owner":           ["Owner", "Owner Code"],
+    "depot":           ["Depot", "Home Depot", "Allocation", "Stabling Point"],
+    "livery":          ["Livery", "Colour Scheme", "Paint Scheme"],
+    "built_year":      ["Year Built", "Built", "Build Year", "Year"],
+    "status":          ["Status", "Disposition", "Current Status"],
+    "previous_number": ["Previous Number", "Former Number", "Renumber From", "Previous No.", "Ex No."],
+    "reporting_mark":  ["Reporting Mark", "Fleet Prefix", "Mark"]
+  },
+
+  "status_map": {
+    "Active":               "active",
+    "In Service":           "active",
+    "Operational":          "active",
+    "Running":              "active",
+    "Stored":               "stored",
+    "Out of Use":           "stored",
+    "Mothballed":           "stored",
+    "Laid Up":              "stored",
+    "Scrapped":             "scrapped",
+    "Written Off":          "scrapped",
+    "Condemned":            "scrapped",
+    "Demolished":           "scrapped",
+    "Sold Overseas":        "transferred",
+    "Exported":             "transferred",
+    "Transferred":          "transferred",
+    "Sold":                 "transferred",
+    "Preserved":            "preserved",
+    "Heritage":             "preserved",
+    "Museum":               "preserved",
+    "Under Repair":         "maintenance",
+    "In Works":             "maintenance",
+    "Overhauled":           "maintenance",
+    "Under Overhaul":       "maintenance",
+    "Workshop":             "maintenance"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "road_number",
+    "secondary_key": null,
+    "format_hint":   "Numeric or alphanumeric road number (e.g. DL 9001, EF 30116, DC 4732)"
+  },
+
+  "optional_fields": {
+    "reporting_mark":  true,
+    "previous_number": true,
+    "owner":           false,
+    "uic_evn":         false,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "New Zealand railway terminology closely mirrors Australian usage. KiwiRail is the dominant operator. Notable builders include Mitsubishi, Toshiba, and General Motors (EMD). 'Sold Overseas' is a common status for units exported to AU or other markets."
+}

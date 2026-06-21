@@ -1,0 +1,92 @@
+{
+  "region_code": "DE",
+  "region_name": "Germany",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Triebfahrzeug",
+    "number":          "Fahrzeugnummer",
+    "class":           "Baureihe",
+    "operator":        "Eisenbahnverkehrsunternehmen",
+    "owner":           "Eigentumer",
+    "depot":           "Betriebswerk",
+    "formation":       "Zugverband",
+    "carriage":        "Personenwagen",
+    "wagon":           "Guterwagen",
+    "multiple_unit":   "Triebwagen",
+    "livery":          "Farbgebung",
+    "builder":         "Hersteller",
+    "year_built":      "Baujahr",
+    "status":          "Status",
+    "previous_number": "Fruhere Nummer",
+    "reporting_mark":  "EVN"
+  },
+
+  "import_aliases": {
+    "number":          ["Fahrzeugnummer", "UIC-Nummer", "EVN", "NVR Number", "Betriebsnummer", "Number", "No.", "Loco No"],
+    "name":            ["Name", "Bezeichnung"],
+    "class":           ["Baureihe", "BR", "Class", "Baureihenbezeichnung"],
+    "operator":        ["Eisenbahnverkehrsunternehmen", "EVU", "Operator", "Betreiber", "Railway"],
+    "owner":           ["Eigentumer", "Owner", "Halter"],
+    "depot":           ["Betriebswerk", "Bw", "Depot", "Stationierungsort", "Heimat-Bw"],
+    "livery":          ["Farbgebung", "Lackierung", "Livery", "Colour Scheme"],
+    "built_year":      ["Baujahr", "Year Built", "Built", "Build Year", "Herstellungsjahr"],
+    "status":          ["Status", "Zustand", "Disposition"],
+    "previous_number": ["Fruhere Nummer", "Alte Nummer", "Previous Number", "Former Number", "Ex No."],
+    "reporting_mark":  ["EVN", "UIC-Nummer", "NVR Number", "Fahrzeugnummer"]
+  },
+
+  "status_map": {
+    "In Betrieb":               "active",
+    "Aktiv":                    "active",
+    "Im Einsatz":               "active",
+    "Active":                   "active",
+    "In Service":               "active",
+    "Operational":              "active",
+    "Abgestellt":               "stored",
+    "Ausgemustert":             "stored",
+    "Z-Gestellt":               "stored",
+    "Stored":                   "stored",
+    "Out of Use":               "stored",
+    "Verschrottet":             "scrapped",
+    "Abgebrochen":              "scrapped",
+    "Scrapped":                 "scrapped",
+    "Condemned":                "scrapped",
+    "Withdrawn":                "scrapped",
+    "Museumsfahrzeug":          "preserved",
+    "Historisch":               "preserved",
+    "Preserved":                "preserved",
+    "Heritage":                 "preserved",
+    "Museum":                   "preserved",
+    "In Aufarbeitung":          "maintenance",
+    "Revision":                 "maintenance",
+    "In der Werkstatt":         "maintenance",
+    "Under Repair":             "maintenance",
+    "Verkauft":                 "transferred",
+    "Umbezeichnet":             "transferred",
+    "Transferred":              "transferred",
+    "Sold":                     "transferred",
+    "Exported":                 "transferred"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "uic_evn",
+    "secondary_key": "road_number",
+    "format_hint":   "12-digit UIC European Vehicle Number (EVN), e.g. 91 80 6193 001-3 D-DB. The Baureihe (e.g. 193, 101, 185) is the class designation."
+  },
+
+  "optional_fields": {
+    "reporting_mark":  false,
+    "previous_number": true,
+    "owner":           true,
+    "uic_evn":         true,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "German railway terminology uses Baureihe (abbreviated BR) for class, e.g. BR 101, BR 193, BR 185. The UIC European Vehicle Number (EVN) is the 12-digit canonical identifier. DB Cargo, DB Fernverkehr, DB Regio, and numerous private EVUs (Eisenbahnverkehrsunternehmen) operate on the network. Operator (EVU) and infrastructure manager (EIU) are always separate entities. Labels are provided in German with English import aliases for data sourced from English-language records."
+}

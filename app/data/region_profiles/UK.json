@@ -1,0 +1,91 @@
+{
+  "region_code": "UK",
+  "region_name": "United Kingdom",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Locomotive",
+    "number":          "Running Number",
+    "class":           "Class",
+    "operator":        "Train Operating Company",
+    "owner":           "ROSCO",
+    "depot":           "Shed",
+    "formation":       "Set",
+    "carriage":        "Coach",
+    "wagon":           "Wagon",
+    "multiple_unit":   "Unit",
+    "livery":          "Livery",
+    "builder":         "Builder",
+    "year_built":      "Year Built",
+    "status":          "Status",
+    "previous_number": "Previous Number",
+    "reporting_mark":  "TOPS Sector"
+  },
+
+  "import_aliases": {
+    "number":          ["Running Number", "Run No", "Run No.", "Loco No", "Loco No.", "Number", "No.", "Fleet No", "Fleet No.", "Unit No", "Unit No."],
+    "name":            ["Name", "Named"],
+    "class":           ["Class", "TOPS Class", "Diagram", "Class No", "Class No."],
+    "operator":        ["Train Operating Company", "TOC", "Operator", "Franchise"],
+    "owner":           ["ROSCO", "Owner", "Leasing Company", "Lessor"],
+    "depot":           ["Shed", "Depot", "Home Shed", "Allocation", "TMD", "MPD", "Stabling Point"],
+    "livery":          ["Livery", "Colour Scheme", "Paint Scheme"],
+    "built_year":      ["Year Built", "Built", "Build Year", "Year", "Date Built"],
+    "status":          ["Status", "Disposition", "Current Status"],
+    "previous_number": ["Previous Number", "Former Number", "Previous No.", "Ex No.", "Renumber From", "Previous Identity"],
+    "reporting_mark":  ["TOPS Sector", "Sector", "Reporting Mark"]
+  },
+
+  "status_map": {
+    "Active":                   "active",
+    "In Service":               "active",
+    "Operational":              "active",
+    "In Traffic":               "active",
+    "On Hire":                  "active",
+    "Stored":                   "stored",
+    "Long Term Stored":         "stored",
+    "Stored Serviceable":       "stored",
+    "Stored Unserviceable":     "stored",
+    "OOU":                      "stored",
+    "Out of Use":               "stored",
+    "Awaiting Disposal":        "stored",
+    "Condemned":                "scrapped",
+    "Cut Up":                   "scrapped",
+    "Scrapped":                 "scrapped",
+    "Withdrawn":                "scrapped",
+    "Preserved":                "preserved",
+    "Heritage":                 "preserved",
+    "Museum":                   "preserved",
+    "On Display":               "preserved",
+    "Under Repair":             "maintenance",
+    "In Works":                 "maintenance",
+    "Heavy Overhaul":           "maintenance",
+    "Classified Overhaul":      "maintenance",
+    "Under Overhaul":           "maintenance",
+    "Accident Damage":          "maintenance",
+    "Exported":                 "transferred",
+    "Sold":                     "transferred",
+    "Transferred":              "transferred"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "road_number",
+    "secondary_key": null,
+    "format_hint":   "TOPS running number (e.g. 37401, 66001, 158840). Multiple units use a set number (e.g. 158840)."
+  },
+
+  "optional_fields": {
+    "reporting_mark":  false,
+    "previous_number": true,
+    "owner":           true,
+    "uic_evn":         false,
+    "shed_code":       true,
+    "lot_number":      false,
+    "rosco":           true
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "UK TOPS class numbering system: Class 37, 66, 158, 170 etc. ROSCO (Rolling Stock Company) is the owner; the TOC (Train Operating Company) is the operator - these are always separate entities. Shed codes (ZA, ZB, CF, LE etc.) are depot abbreviations widely used in UK spotting records. 'Withdrawn' is the most common terminal status."
+}

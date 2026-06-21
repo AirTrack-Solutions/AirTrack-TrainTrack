@@ -1,0 +1,61 @@
+{
+  "region_code": "CUSTOM",
+  "region_name": "Custom / User-Defined",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Unit",
+    "number":          "Unit Number",
+    "class":           "Class / Model",
+    "operator":        "Fleet Operator",
+    "owner":           "Owner",
+    "depot":           "Home Base",
+    "formation":       "Formation",
+    "carriage":        "Carriage / Car",
+    "wagon":           "Wagon / Car",
+    "multiple_unit":   "Multiple Unit",
+    "livery":          "Livery",
+    "builder":         "Builder / Manufacturer",
+    "year_built":      "Year Built",
+    "status":          "Status",
+    "previous_number": "Previous Number",
+    "reporting_mark":  "Reporting Mark / Prefix"
+  },
+
+  "import_aliases": {
+    "number":          ["Unit Number", "Road Number", "Running Number", "Fleet No", "Fleet No.", "Unit No", "Unit No.", "Loco No", "Loco No.", "Number", "No.", "Fahrzeugnummer", "Numero", "EVN"],
+    "name":            ["Name", "Named", "Loco Name", "Nom", "Bezeichnung"],
+    "class":           ["Class", "Class / Model", "Model", "Type", "Baureihe", "BR", "Serie", "Diagram", "TOPS Class"],
+    "operator":        ["Fleet Operator", "Operator", "Railroad", "Railway", "Train Operating Company", "TOC", "EVU", "Exploitant"],
+    "owner":           ["Owner", "ROSCO", "Eigentumer", "Proprietaire", "Leasing Company"],
+    "depot":           ["Home Base", "Depot", "Shed", "Yard", "Allocation", "Betriebswerk", "Bw", "Remise"],
+    "livery":          ["Livery", "Paint Scheme", "Colour Scheme", "Farbgebung", "Livrée", "Livree"],
+    "built_year":      ["Year Built", "Built", "Build Year", "Year", "Baujahr", "Annee de Construction", "Date Built"],
+    "status":          ["Status", "Disposition", "Current Status", "Zustand", "Etat"],
+    "previous_number": ["Previous Number", "Former Number", "Previous No.", "Ex No.", "Renumber From", "Alte Nummer", "Ancien Numero"],
+    "reporting_mark":  ["Reporting Mark", "AAR Mark", "Fleet Prefix", "Mark", "EVN", "UIC-Nummer"]
+  },
+
+  "status_map": {},
+
+  "identity_strategy": {
+    "primary_key":   "road_number",
+    "secondary_key": null,
+    "format_hint":   "No format assumed. Enter the unit's primary identifier as used in your records."
+  },
+
+  "optional_fields": {
+    "reporting_mark":  false,
+    "previous_number": false,
+    "owner":           false,
+    "uic_evn":         false,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "Generic catch-all profile for regions not yet covered, or for user-defined terminology. The status_map is intentionally empty: unmapped status values will be surfaced for manual resolution at import time. Clone this profile and customise it for any fleet that does not fit AU, NZ, UK, USA, DE, or FR conventions. Save user-modified copies to app/data/region_profiles/user/ to preserve them across application updates."
+}

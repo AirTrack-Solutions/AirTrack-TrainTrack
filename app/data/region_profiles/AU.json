@@ -1,0 +1,87 @@
+{
+  "region_code": "AU",
+  "region_name": "Australia",
+  "version": 1,
+
+  "labels": {
+    "locomotive":      "Locomotive",
+    "number":          "Road Number",
+    "class":           "Class",
+    "operator":        "Operator",
+    "owner":           "Owner",
+    "depot":           "Depot",
+    "formation":       "Formation",
+    "carriage":        "Carriage",
+    "wagon":           "Wagon",
+    "multiple_unit":   "Multiple Unit",
+    "livery":          "Livery",
+    "builder":         "Builder",
+    "year_built":      "Year Built",
+    "status":          "Status",
+    "previous_number": "Previous Number",
+    "reporting_mark":  "Reporting Mark"
+  },
+
+  "import_aliases": {
+    "number":          ["Road Number", "Fleet No", "Fleet No.", "Unit No", "Unit No.", "Loco No", "Loco No.", "Number", "No."],
+    "name":            ["Name", "Named", "Loco Name"],
+    "class":           ["Class", "Class Code", "Loco Class"],
+    "operator":        ["Operator", "Operator Code", "Railway"],
+    "owner":           ["Owner", "Owner Code"],
+    "depot":           ["Depot", "Home Depot", "Allocation", "Stabling Point"],
+    "livery":          ["Livery", "Colour Scheme", "Paint Scheme"],
+    "built_year":      ["Year Built", "Built", "Build Year", "Year"],
+    "status":          ["Status", "Disposition", "Current Status"],
+    "previous_number": ["Previous Number", "Former Number", "Renumber From", "Previous No.", "Ex No."],
+    "reporting_mark":  ["Reporting Mark", "AAR Mark", "Fleet Prefix", "Mark"]
+  },
+
+  "status_map": {
+    "Active":               "active",
+    "In Service":           "active",
+    "Operational":          "active",
+    "Running":              "active",
+    "Stored":               "stored",
+    "OOUS":                 "stored",
+    "Out of Use":           "stored",
+    "Out of Use Stored":    "stored",
+    "Mothballed":           "stored",
+    "Laid Up":              "stored",
+    "Scrapped":             "scrapped",
+    "Written Off":          "scrapped",
+    "Condemned":            "scrapped",
+    "Demolished":           "scrapped",
+    "Preserved":            "preserved",
+    "Heritage":             "preserved",
+    "Museum":               "preserved",
+    "Under Repair":         "maintenance",
+    "In Works":             "maintenance",
+    "Overhauled":           "maintenance",
+    "Under Overhaul":       "maintenance",
+    "Workshop":             "maintenance",
+    "Transferred":          "transferred",
+    "Sold":                 "transferred",
+    "Exported":             "transferred"
+  },
+
+  "identity_strategy": {
+    "primary_key":   "road_number",
+    "secondary_key": null,
+    "format_hint":   "Numeric or alphanumeric road number (e.g. 8138, CLF1, NR100)"
+  },
+
+  "optional_fields": {
+    "reporting_mark":  true,
+    "previous_number": true,
+    "owner":           false,
+    "uic_evn":         false,
+    "shed_code":       false,
+    "lot_number":      false,
+    "rosco":           false
+  },
+
+  "cop_term": "cop",
+  "dub_term": "dub",
+
+  "notes": "Standard Australian freight and passenger railway terminology. Reporting marks are AAR-style 2-4 letter codes (PN, CFCLA, QRN). Owner and operator are usually the same entity for most Australian fleets."
+}
