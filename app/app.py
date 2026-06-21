@@ -8,6 +8,7 @@ from version import FULL_VERSION, DISPLAY_VERSION
 
 from utils.country_flags import get_country_flag
 from utils import jinja_filters, theme_scanner
+from utils.region_profile import get_active_profile
 from extensions import db
 
 import logging
@@ -218,6 +219,12 @@ def inject_theme():
             return {"TRAINTRACK_THEME": theme}
     except Exception:
         return {"TRAINTRACK_THEME": "default"}
+
+
+@app.context_processor
+def inject_active_profile():
+    """Inject the active region profile into all templates as `profile`."""
+    return {"profile": get_active_profile()}
 
 
 # ---------------------------------------------------------------------------

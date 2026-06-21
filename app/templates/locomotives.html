@@ -15,7 +15,7 @@
 <div class="tt-filter-card">
   <form method="get" class="tt-filter-form">
     <div class="tt-filter-item"><input type="text" name="q" value="{{ search }}" placeholder="Search number, name, class…"></div>
-    <div class="tt-filter-item"><select name="status"><option value="">All Statuses</option>{% for s in ['active','withdrawn','preserved','stored','scrapped'] %}<option value="{{ s }}" {{ 'selected' if status == s }}>{{ s|capitalize }}</option>{% endfor %}</select></div>
+    <div class="tt-filter-item"><select name="status"><option value="">All Statuses</option>{% for s in ['active','withdrawn','preserved','stored','scrapped','maintenance','transferred'] %}<option value="{{ s }}" {{ 'selected' if status == s }}>{{ s|capitalize }}</option>{% endfor %}</select></div>
     <div class="tt-filter-item"><select name="type_id"><option value="">All Types</option>{% for t in types %}<option value="{{ t.id }}" {{ 'selected' if type_id|string == t.id|string }}>{{ t.name }}</option>{% endfor %}</select></div>
     <div class="tt-filter-item"><select name="operator_id"><option value="">All Operators</option>{% for o in operators %}<option value="{{ o.id }}" {{ 'selected' if op_id|string == o.id|string }}>{{ o.name }}</option>{% endfor %}</select></div>
     <div class="tt-filter-item"><button type="submit">Search</button></div>
@@ -25,7 +25,7 @@
 
 <table class="tt-table">
   <thead>
-    <tr><th>Number</th><th>Name</th><th>Class</th><th>Type</th><th>Operator</th><th>Status</th><th>Sightings</th><th>Actions</th></tr>
+    <tr><th>{{ profile.labels.number }}</th><th>Name</th><th>{{ profile.labels['class'] }}</th><th>Type</th><th>{{ profile.labels.operator }}</th><th>{{ profile.labels.status }}</th><th>Sightings</th><th>Actions</th></tr>
   </thead>
   <tbody>
     {% for loco in locomotives %}

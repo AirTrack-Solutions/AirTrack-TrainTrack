@@ -50,16 +50,16 @@
              style="width:100%;border-radius:6px;border:1px solid #ddd;object-fit:cover;max-height:200px;">
       </div>
       {% endif %}
-      {{ row('Number', loco.number) }}
+      {{ row(profile.labels.number, loco.number) }}
       {{ row('Name', loco.name) }}
-      {{ row('Class', loco.class_name) }}
+      {{ row(profile.labels['class'], loco.class_name) }}
       {{ row('Type', loco.type_name) }}
-      {{ row('Operator', loco.operator_name) }}
-      {{ row('Depot', loco.depot_name) }}
-      {{ row('Livery', loco.livery) }}
-      {{ row('Built', loco.built_year) }}
+      {{ row(profile.labels.operator, loco.operator_name) }}
+      {{ row(profile.labels.depot, loco.depot_name) }}
+      {{ row(profile.labels.livery, loco.livery) }}
+      {{ row(profile.labels.year_built, loco.built_year) }}
       {{ row('Country', loco.country_name) }}
-      <div style="margin-bottom:8px;"><strong style="color:#7a1a0a;font-size:0.8rem;">Status</strong><br><span class="tt-badge tt-badge-{{ loco.status }}">{{ loco.status|capitalize }}</span></div>
+      <div style="margin-bottom:8px;"><strong style="color:#7a1a0a;font-size:0.8rem;">{{ profile.labels.status }}</strong><br><span class="tt-badge tt-badge-{{ loco.status }}">{{ loco.status|capitalize }}</span></div>
       {% if loco.notes %}<div><strong style="color:#7a1a0a;font-size:0.8rem;">Notes</strong><br><span style="color:#555;font-size:0.9rem;">{{ loco.notes }}</span></div>{% endif %}
     </div>
   </div>

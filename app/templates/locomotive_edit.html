@@ -8,15 +8,15 @@
   <form method="post" enctype="multipart/form-data">
     <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
     <div class="tt-form-grid">
-      <div class="tt-form-group"><label>Number *</label><input type="text" name="number" value="{{ loco.number }}" required></div>
+      <div class="tt-form-group"><label>{{ profile.labels.number }} *</label><input type="text" name="number" value="{{ loco.number }}" required></div>
       <div class="tt-form-group"><label>Name</label><input type="text" name="name" value="{{ loco.name or '' }}"></div>
-      <div class="tt-form-group"><label>Class</label><select name="class_id"><option value="">— Select —</option>{% for c in classes %}<option value="{{ c.id }}" {{ 'selected' if loco.class_id == c.id }}>{{ c.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>{{ profile.labels['class'] }}</label><select name="class_id"><option value="">— Select —</option>{% for c in classes %}<option value="{{ c.id }}" {{ 'selected' if loco.class_id == c.id }}>{{ c.name }}</option>{% endfor %}</select></div>
       <div class="tt-form-group"><label>Type</label><select name="type_id"><option value="">— Select —</option>{% for t in types %}<option value="{{ t.id }}" {{ 'selected' if loco.type_id == t.id }}>{{ t.name }}</option>{% endfor %}</select></div>
-      <div class="tt-form-group"><label>Operator</label><select name="operator_id"><option value="">— Select —</option>{% for o in operators %}<option value="{{ o.id }}" {{ 'selected' if loco.operator_id == o.id }}>{{ o.name }}</option>{% endfor %}</select></div>
-      <div class="tt-form-group"><label>Depot</label><select name="depot_id"><option value="">— Select —</option>{% for d in depots %}<option value="{{ d.id }}" {{ 'selected' if loco.depot_id == d.id }}>{{ d.name }}</option>{% endfor %}</select></div>
-      <div class="tt-form-group"><label>Livery</label><input type="text" name="livery" value="{{ loco.livery or '' }}"></div>
-      <div class="tt-form-group"><label>Built Year</label><input type="number" name="built_year" value="{{ loco.built_year or '' }}" min="1800" max="2099"></div>
-      <div class="tt-form-group"><label>Status</label><select name="status">{% for s in ['active','withdrawn','preserved','stored','scrapped'] %}<option value="{{ s }}" {{ 'selected' if loco.status == s }}>{{ s|capitalize }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>{{ profile.labels.operator }}</label><select name="operator_id"><option value="">— Select —</option>{% for o in operators %}<option value="{{ o.id }}" {{ 'selected' if loco.operator_id == o.id }}>{{ o.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>{{ profile.labels.depot }}</label><select name="depot_id"><option value="">— Select —</option>{% for d in depots %}<option value="{{ d.id }}" {{ 'selected' if loco.depot_id == d.id }}>{{ d.name }}</option>{% endfor %}</select></div>
+      <div class="tt-form-group"><label>{{ profile.labels.livery }}</label><input type="text" name="livery" value="{{ loco.livery or '' }}"></div>
+      <div class="tt-form-group"><label>{{ profile.labels.year_built }}</label><input type="number" name="built_year" value="{{ loco.built_year or '' }}" min="1800" max="2099"></div>
+      <div class="tt-form-group"><label>{{ profile.labels.status }}</label><select name="status">{% for s in ['active','withdrawn','preserved','stored','scrapped','maintenance','transferred'] %}<option value="{{ s }}" {{ 'selected' if loco.status == s }}>{{ s|capitalize }}</option>{% endfor %}</select></div>
       <div class="tt-form-group"><label>Country</label><select name="country_code"><option value="">— Select —</option>{% for c in countries %}<option value="{{ c.code }}" {{ 'selected' if loco.country_code == c.code }}>{{ c.name }}</option>{% endfor %}</select></div>
       <div class="tt-form-group" style="grid-column:1/-1;"><label>Notes</label><textarea name="notes" rows="3">{{ loco.notes or '' }}</textarea></div>
       <div class="tt-form-group" style="grid-column:1/-1;">
