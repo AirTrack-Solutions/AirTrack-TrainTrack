@@ -66,14 +66,16 @@ def index():
                 """)
             ).mappings().all()
 
-            # Sightings by type
+            # Fleet by effective type (loco override, else class default)
             by_type = conn.execute(
                 text("""
-                    SELECT t.name, COUNT(*) AS cnt
-                    FROM sightings s
-                    JOIN locomotives l ON l.id = s.locomotive_id
-                    JOIN types       t ON t.id = l.type_id
-                    GROUP BY t.id, t.name
+                    SELECT COALESCE(lt.name, ct.name) AS name, COUNT(*) AS cnt
+                    FROM locomotives l
+                    LEFT JOIN classes c  ON c.id  = l.class_id
+                    LEFT JOIN types  lt ON lt.id = l.type_id
+                    LEFT JOIN types  ct ON ct.id = c.type_id
+                    WHERE COALESCE(lt.name, ct.name) IS NOT NULL
+                    GROUP BY COALESCE(lt.id, ct.id), COALESCE(lt.name, ct.name)
                     ORDER BY cnt DESC
                 """)
             ).mappings().all()
@@ -123,13 +125,14 @@ def cops_list():
                         l.number AS loco_number,
                         l.name   AS loco_name,
                         c.name   AS class_name,
-                        t.name   AS type_name,
+                        COALESCE(lt.name, ct.name) AS type_name,
                         o.name   AS operator_name,
                         loc.name AS location_name
                     FROM sightings s
                     JOIN locomotives l ON l.id = s.locomotive_id
                     LEFT JOIN classes   c   ON c.id   = l.class_id
-                    LEFT JOIN types     t   ON t.id   = l.type_id
+                    LEFT JOIN types     lt  ON lt.id  = l.type_id
+                    LEFT JOIN types     ct  ON ct.id  = c.type_id
                     LEFT JOIN operators o   ON o.id   = l.operator_id
                     LEFT JOIN locations loc ON loc.id = s.location_id
                     WHERE s.is_cop = 1
@@ -152,12 +155,13 @@ def needs_cops():
                     SELECT
                         l.id, l.number, l.name, l.status,
                         c.name AS class_name,
-                        t.name AS type_name,
+                        COALESCE(lt.name, ct.name) AS type_name,
                         o.name AS operator_name
                     FROM locomotives l
-                    LEFT JOIN classes   c ON c.id = l.class_id
-                    LEFT JOIN types     t ON t.id = l.type_id
-                    LEFT JOIN operators o ON o.id = l.operator_id
+                    LEFT JOIN classes   c  ON c.id  = l.class_id
+                    LEFT JOIN types     lt ON lt.id = l.type_id
+                    LEFT JOIN types     ct ON ct.id = c.type_id
+                    LEFT JOIN operators o  ON o.id  = l.operator_id
                     WHERE l.id NOT IN (
                         SELECT DISTINCT locomotive_id FROM sightings
                         WHERE locomotive_id IS NOT NULL

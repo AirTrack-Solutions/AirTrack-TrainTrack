@@ -71,7 +71,7 @@ def index():
         where.append("l.status = :status")
         params["status"] = status
     if type_id:
-        where.append("l.type_id = :type_id")
+        where.append("COALESCE(l.type_id, c.type_id) = :type_id")
         params["type_id"] = type_id
     if op_id:
         where.append("l.operator_id = :op_id")
@@ -98,14 +98,15 @@ def index():
                     SELECT
                         l.id, l.number, l.name, l.status, l.livery, l.image,
                         c.name  AS class_name,
-                        t.name  AS type_name,
+                        COALESCE(lt.name, ct.name) AS type_name,
                         o.name  AS operator_name,
                         co.name AS country_name,
                         (SELECT COUNT(*) FROM sightings s WHERE s.locomotive_id = l.id) AS sighting_count,
                         (SELECT COUNT(*) FROM sightings s WHERE s.locomotive_id = l.id AND s.is_cop = 1) AS is_copped
                     FROM locomotives l
                     LEFT JOIN classes   c  ON c.id   = l.class_id
-                    LEFT JOIN types     t  ON t.id   = l.type_id
+                    LEFT JOIN types     lt ON lt.id  = l.type_id
+                    LEFT JOIN types     ct ON ct.id  = c.type_id
                     LEFT JOIN operators o  ON o.id   = l.operator_id
                     LEFT JOIN countries co ON co.code = l.country_code
                     WHERE {where_clause}
@@ -145,13 +146,14 @@ def detail(loco_id):
                     SELECT
                         l.*,
                         c.name  AS class_name,
-                        t.name  AS type_name,
+                        COALESCE(lt.name, ct.name) AS type_name,
                         o.name  AS operator_name,
                         d.name  AS depot_name,
                         co.name AS country_name
                     FROM locomotives l
                     LEFT JOIN classes   c  ON c.id   = l.class_id
-                    LEFT JOIN types     t  ON t.id   = l.type_id
+                    LEFT JOIN types     lt ON lt.id  = l.type_id
+                    LEFT JOIN types     ct ON ct.id  = c.type_id
                     LEFT JOIN operators o  ON o.id   = l.operator_id
                     LEFT JOIN depots    d  ON d.id   = l.depot_id
                     LEFT JOIN countries co ON co.code = l.country_code
