@@ -1,0 +1,86 @@
+{
+  "source": {
+    "name": "Railtram AU — Approved Class Overrides",
+    "url": "https://en.wikipedia.org/wiki/Queensland_Railways_2250_class ; https://en.wikipedia.org/wiki/Queensland_Railways_2150_class",
+    "accessed_at": "2026-06-22",
+    "region_profile": "AU",
+    "country_code": "AU",
+    "generated_by": "manual-override-2026-06-22",
+    "notes": "Manually approved records excluded from main seed due to class-not-on-page flag. 2250: confirmed real QR/Aurizon class (Redbank rebuild, 2251-2275 fleet). 2150: confirmed real QR class (2150-2163 fleet). FMG SD70ACe-P6 held pending external fleet verification."
+  },
+  "summary": {
+    "source_rows": 2,
+    "records": 6,
+    "review_flags": 0,
+    "cross_operator_shared_numbers": 0
+  },
+  "records": [
+    {
+      "country_code": "AU",
+      "operator_code": "Aurizon",
+      "operator": "Aurizon",
+      "class": "2250",
+      "number": "2260",
+      "source_expression": "2260, 2261, 2262, 2269, 2275",
+      "source_row_index": 1,
+      "status": null,
+      "flags": []
+    },
+    {
+      "country_code": "AU",
+      "operator_code": "Aurizon",
+      "operator": "Aurizon",
+      "class": "2250",
+      "number": "2261",
+      "source_expression": "2260, 2261, 2262, 2269, 2275",
+      "source_row_index": 1,
+      "status": null,
+      "flags": []
+    },
+    {
+      "country_code": "AU",
+      "operator_code": "Aurizon",
+      "operator": "Aurizon",
+      "class": "2250",
+      "number": "2262",
+      "source_expression": "2260, 2261, 2262, 2269, 2275",
+      "source_row_index": 1,
+      "status": null,
+      "flags": []
+    },
+    {
+      "country_code": "AU",
+      "operator_code": "Aurizon",
+      "operator": "Aurizon",
+      "class": "2250",
+      "number": "2269",
+      "source_expression": "2260, 2261, 2262, 2269, 2275",
+      "source_row_index": 1,
+      "status": null,
+      "flags": []
+    },
+    {
+      "country_code": "AU",
+      "operator_code": "Aurizon",
+      "operator": "Aurizon",
+      "class": "2250",
+      "number": "2275",
+      "source_expression": "2260, 2261, 2262, 2269, 2275",
+      "source_row_index": 1,
+      "status": null,
+      "flags": []
+    },
+    {
+      "country_code": "AU",
+      "operator_code": "QR",
+      "operator": "Queensland Rail",
+      "class": "2150",
+      "number": "2158",
+      "source_expression": "2158",
+      "source_row_index": 2,
+      "status": null,
+      "flags": []
+    }
+  ],
+  "review_flags": []
+}
