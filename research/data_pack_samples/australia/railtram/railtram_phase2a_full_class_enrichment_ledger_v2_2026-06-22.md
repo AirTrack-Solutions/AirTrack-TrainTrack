@@ -2,7 +2,7 @@
 **Date:** 2026-06-22
 **Author:** Goblin (Phase 2A full batch, v2)
 **Supersedes:** railtram_phase2a_full_class_enrichment_ledger_2026-06-22.md (v1 — broad Diesel only)
-**Status:** LEDGER ONLY. No DB changes. Awaiting Prudence review + Trevor approval.
+**Status:** PRUDENCE CLEARED. Trevor ruling applied (BEL: Bi-mode). Awaiting Iguana dry-run + Trevor apply approval.
 
 ---
 
@@ -35,7 +35,8 @@ full batch accordingly.
 | Medium confidence (flagged) | 4 |
 | Low confidence / blocked | 0 |
 | Type: Diesel-electric | 146 |
-| Type: Electric | 6 |
+| Type: Electric | 5 |
+| Type: Bi-mode | 1 |
 | Type: Diesel-hydraulic | 2 |
 | Type: Diesel-mechanical | 2 |
 | Pilot classes (already applied) | 5 |
@@ -857,12 +858,13 @@ Excluded. No source — no proposed updates.
 - **Source:** `https://www.railtram.com.au/bel-class`
 - **Engine (raw):** `1500 V electric/battery`
 - **Wheel arrangement:** `Bo-Bo`
-- **Proposed type:** Electric (type_id=3)
+- **Proposed type:** Bi-mode (type_id=13)
 - **Proposed manufacturer:** CRRC ZhuZhou Locomotive Company
 - **Proposed introduced_year:** 2018
 - **Confidence:** high
-- **Reasoning:** explicit electric engine string
-- **Safe for Prudence:** Yes
+- **Reasoning:** explicit electric engine string; source says "1500 V electric/battery" — battery component explicit
+- **Trevor ruling:** Bi-mode. Source string "1500 V electric/battery" supports Bi-mode classification. Electric would be defensible, but Bi-mode is more precise now that the type exists in the vocabulary.
+- **Safe for Prudence:** Yes (Prudence cleared; ruling applied 2026-06-22)
 
 ### BL (id=79)
 - **Source:** `https://www.railtram.com.au/bl-class`
@@ -2062,8 +2064,8 @@ WHERE id = 76 AND name = 'AN';
 UPDATE classes SET type_id = 9, manufacturer = 'Clyde Engineering', introduced_year = 1952
 WHERE id = 77 AND name = 'B';
 
-UPDATE classes SET type_id = 3, manufacturer = 'CRRC ZhuZhou Locomotive Company', introduced_year = 2018
-WHERE id = 78 AND name = 'BEL';
+UPDATE classes SET type_id = 13, manufacturer = 'CRRC ZhuZhou Locomotive Company', introduced_year = 2018
+WHERE id = 78 AND name = 'BEL';  -- Bi-mode (Trevor ruling 2026-06-22)
 
 UPDATE classes SET type_id = 9, manufacturer = 'Clyde Engineering', introduced_year = 1984
 WHERE id = 79 AND name = 'BL';
