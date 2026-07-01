@@ -1,0 +1,65 @@
+{
+  "_meta": {
+    "description": "Status code lookup for SpotLog UK staging data",
+    "version": "1.0.0",
+    "created": "2026-06-27",
+    "updated": "2026-06-27",
+    "source": "SpotLog (spotlog.org) — inferred from vehicle context and notes",
+    "total_codes": 10,
+    "confirmed": 5,
+    "inferred": 4,
+    "unresolved": 1
+  },
+  "codes": {
+    "A": {
+      "status_text": "Active",
+      "confidence": "confirmed",
+      "notes": "Explicitly active/operational. Seen on Class 37 — confirmed by context."
+    },
+    "S": {
+      "status_text": "Stored",
+      "confidence": "confirmed",
+      "notes": "Stored/out of use. Standard TOPS-era convention."
+    },
+    "P": {
+      "status_text": "Preserved",
+      "confidence": "confirmed",
+      "notes": "Preserved — in private/heritage ownership."
+    },
+    "X": {
+      "status_text": "Withdrawn",
+      "confidence": "confirmed",
+      "notes": "Withdrawn from service. Not necessarily scrapped."
+    },
+    "T": {
+      "status_text": "Trial / Conversion",
+      "confidence": "confirmed",
+      "notes": "Under trial or conversion. Seen on locos undergoing modification."
+    },
+    "E": {
+      "status_text": "Exported",
+      "confidence": "inferred",
+      "notes": "52/53 E-status Class 66s are in WGEA pool (DB Cargo France). One Class 47 (47375) also E with no pool/depot. Consistent with exported to continental Europe."
+    },
+    "W": {
+      "status_text": "Written Off",
+      "confidence": "inferred",
+      "notes": "66048 notes: 'Derailed at Carrbridge 04/01/2010 and written-off.' 47811 also W. Distinct from X (Withdrawn) — implies accidental write-off."
+    },
+    "~": {
+      "status_text": "Overseas / On Hire Abroad",
+      "confidence": "inferred",
+      "notes": "66954/5/6 notes: 'In Poland as 66019/24/25'. Other ~ vehicles are active DB Cargo locos. Tilde appears to mean operating abroad under a different number or on hire overseas."
+    },
+    "O": {
+      "status_text": "On Loan",
+      "confidence": "inferred",
+      "notes": "Single vehicle: 66732, GBRf GBLT pool, Long Preston depot, no notes. Insufficient data to confirm. 'On Loan' is the most likely meaning given operator context."
+    },
+    "(blank)": {
+      "status_text": null,
+      "confidence": "unresolved",
+      "notes": "Blank status appears on 379/682 staged vehicles including active Class 66s. May mean 'normal operational status' for that class, but cannot be globally mapped to Active without class-level confirmation. Must remain NULL in status_text."
+    }
+  }
+}

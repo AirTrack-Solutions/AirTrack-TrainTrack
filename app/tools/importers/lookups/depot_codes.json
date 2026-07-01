@@ -1,0 +1,221 @@
+{
+  "_meta": {
+    "description": "Depot code lookup for SpotLog UK staging data",
+    "source_primary": "RCTS Features \u2014 Depot Codes (features.rcts.org.uk/locomotives/depot-codes/)",
+    "source_fetched": "2026-06-27",
+    "total_codes": 40,
+    "rcts_confirmed": 36,
+    "inferred": 3,
+    "unresolved": 1,
+    "version": "1.0.0",
+    "created": "2026-06-27",
+    "updated": "2026-06-27",
+    "source": "RCTS Features \u2014 Depot Codes (features.rcts.org.uk/locomotives/depot-codes/)"
+  },
+  "codes": {
+    "TO": {
+      "depot_name": "Toton TMD",
+      "operator": "DB Cargo UK",
+      "confidence": "rcts_confirmed"
+    },
+    "LD": {
+      "depot_name": "Leeds, Midland Road T&RSMD",
+      "operator": "Freightliner Maintenance Limited",
+      "confidence": "rcts_confirmed"
+    },
+    "PG": {
+      "depot_name": "Peterborough SD, GBRF",
+      "operator": "Electro-Motive Services International Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "AZ": {
+      "depot_name": "Alizay, France",
+      "operator": "Axiom Rail",
+      "confidence": "rcts_confirmed"
+    },
+    "RR": {
+      "depot_name": "Roberts Road, Doncaster",
+      "operator": "Electro-Motive Services International Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "WQ": {
+      "depot_name": "DB Schenker Headquarters",
+      "operator": "DB Cargo UK",
+      "confidence": "rcts_confirmed"
+    },
+    "PR": {
+      "depot_name": "Preston Bakehouse Sidings",
+      "operator": "First Trenitalia",
+      "confidence": "rcts_confirmed"
+    },
+    "CS": {
+      "depot_name": "Carnforth (WCR)",
+      "operator": "West Coast Railway Company",
+      "confidence": "rcts_confirmed"
+    },
+    "PN": {
+      "depot_name": "Poznan, Poland",
+      "operator": "Axiom Rail",
+      "confidence": "rcts_confirmed"
+    },
+    "KM": {
+      "depot_name": "Kingmoor, Carlisle, TMD",
+      "operator": "Direct Rail Services Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "CL": {
+      "depot_name": "Carlisle Upperby T&RSMD (Closed)",
+      "operator": "",
+      "confidence": "rcts_confirmed"
+    },
+    "CB": {
+      "depot_name": "Condor Park, Butterley",
+      "operator": "Midland Railway Centre",
+      "confidence": "rcts_confirmed"
+    },
+    "~": {
+      "depot_name": "Unknown / Not Allocated",
+      "operator": "",
+      "confidence": "inferred",
+      "inferred_from": "SpotLog convention: tilde = unknown/not allocated"
+    },
+    "LR": {
+      "depot_name": "Leicester Loco SD",
+      "operator": "UK Rail Leasing",
+      "confidence": "rcts_confirmed"
+    },
+    "BU": {
+      "depot_name": "Burngullow (FLHH)",
+      "operator": "Freightliner Heavy Haul Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "RU": {
+      "depot_name": "Rugby DED (Colas Rail, Operations Centre)",
+      "operator": "Colas Rail Limited",
+      "confidence": "rcts_confirmed"
+    },
+    "CW": {
+      "depot_name": "Cricklewood Depot",
+      "operator": "Abellio East Midlands Limited",
+      "confidence": "rcts_confirmed"
+    },
+    "LP": {
+      "depot_name": "Long Preston Sidings",
+      "operator": "GB Railfreight",
+      "confidence": "inferred",
+      "inferred_from": "SpotLog context: GBSD/GBLT pool locos; Long Preston is known GBRf storage location"
+    },
+    "IP": {
+      "depot_name": "Ipswich FP",
+      "operator": "Abellio Greater Anglia Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "ZG": {
+      "depot_name": "Eastleigh Works",
+      "operator": "Arlington Fleet Services",
+      "confidence": "rcts_confirmed"
+    },
+    "DE": {
+      "depot_name": "Dereham, Mid-Norfolk Railway",
+      "operator": "Mid-Norfolk Railway",
+      "confidence": "inferred",
+      "inferred_from": "SpotLog context: preserved locos (P status) with MBDL (Mid-Norfolk/Bo'ness) pool, name Dereham Neatherd High School"
+    },
+    "SK": {
+      "depot_name": "Stoke Gifford FLH",
+      "operator": "Freightliner Heavy Haul Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "MD": {
+      "depot_name": "Merehead TMD",
+      "operator": "Freightliner Heavy Haul Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "WH": {
+      "depot_name": "Whatley TMD",
+      "operator": "Freightliner Heavy Haul Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "TN": {
+      "depot_name": "Thornton FP",
+      "operator": "DB Cargo UK",
+      "confidence": "rcts_confirmed"
+    },
+    "WS": {
+      "depot_name": "Worksop LHS",
+      "operator": "DB Cargo UK",
+      "confidence": "rcts_confirmed"
+    },
+    "BH": {
+      "depot_name": "Barrow Hill SD",
+      "operator": "Barrow Hill Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "BQ": {
+      "depot_name": "Bardon Hill Quarry",
+      "operator": "Freightliner Group Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "TM": {
+      "depot_name": "Tyseley Railway Museum",
+      "operator": "Tyseley Locomotive Works",
+      "confidence": "rcts_confirmed"
+    },
+    "BO": {
+      "depot_name": "Burton upon Trent T&RSMD",
+      "operator": "Nemesis Rail Limited",
+      "confidence": "rcts_confirmed"
+    },
+    "SZ": {
+      "depot_name": "Southampton Maritime TML",
+      "operator": "Freightliner Group Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "FD": {
+      "depot_name": "Freightliner Nationwide, Diesel Locos",
+      "operator": "Freightliner Group Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "ZN": {
+      "depot_name": "Wolverton Renovation Centre",
+      "operator": "Gemini Rail Services UK Ltd",
+      "confidence": "rcts_confirmed"
+    },
+    "HQ": {
+      "depot_name": "HQ Locos",
+      "operator": "",
+      "confidence": "rcts_confirmed"
+    },
+    "NY": {
+      "depot_name": "Grosmont NYM Railway",
+      "operator": "North Yorkshire Moors Railway",
+      "confidence": "rcts_confirmed"
+    },
+    "GY": {
+      "depot_name": "Unknown",
+      "operator": "",
+      "confidence": "unresolved",
+      "inferred_from": "Only 1 vehicle (1662/D47484, TTLS pool, S status) - possibly foreign storage, not in RCTS"
+    },
+    "CQ": {
+      "depot_name": "Crewe Railway Age",
+      "operator": "Crewe Heritage Centre",
+      "confidence": "rcts_confirmed"
+    },
+    "KY": {
+      "depot_name": "Knottingley TMD",
+      "operator": "DB Cargo UK",
+      "confidence": "rcts_confirmed"
+    },
+    "RL": {
+      "depot_name": "Ropley (Mid-Hants)",
+      "operator": "Mid Hants Railway",
+      "confidence": "rcts_confirmed"
+    },
+    "YK": {
+      "depot_name": "York National Railway Museum",
+      "operator": "National Railway Museum",
+      "confidence": "rcts_confirmed"
+    }
+  }
+}

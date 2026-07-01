@@ -1,0 +1,2786 @@
+[
+  {
+    "staging_id": "GB:spotlog:66:66146",
+    "vehicle_number_raw": "66146",
+    "alt_number_raw": "0066 146-6",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 146-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66153",
+    "vehicle_number_raw": "66153",
+    "alt_number_raw": "0066 153-2",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 153-2"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66157",
+    "vehicle_number_raw": "66157",
+    "alt_number_raw": "0066 157-3",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 157-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66159",
+    "vehicle_number_raw": "66159",
+    "alt_number_raw": "0066 159-9",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 159-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66163",
+    "vehicle_number_raw": "66163",
+    "alt_number_raw": "0066 163-1",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 163-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66166",
+    "vehicle_number_raw": "66166",
+    "alt_number_raw": "0066 166-4",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 166-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66173",
+    "vehicle_number_raw": "66173",
+    "alt_number_raw": "0066 173-0",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 173-0"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66178",
+    "vehicle_number_raw": "66178",
+    "alt_number_raw": "0066 178-9",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 178-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66180",
+    "vehicle_number_raw": "66180",
+    "alt_number_raw": "0066 180-5",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 180-5"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66189",
+    "vehicle_number_raw": "66189",
+    "alt_number_raw": "0066 189-6",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 189-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66196",
+    "vehicle_number_raw": "66196",
+    "alt_number_raw": "0066 196-1",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 196-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66220",
+    "vehicle_number_raw": "66220",
+    "alt_number_raw": "0066 220-9",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 220-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66227",
+    "vehicle_number_raw": "66227",
+    "alt_number_raw": "0066 227-4",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 227-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66237",
+    "vehicle_number_raw": "66237",
+    "alt_number_raw": "0066 237-3",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 237-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66248",
+    "vehicle_number_raw": "66248",
+    "alt_number_raw": "0066 248-0",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "0066 248-0"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66306",
+    "vehicle_number_raw": "66306",
+    "alt_number_raw": "CB1001,266 106-4",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "CB1001",
+      "266 106-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66307",
+    "vehicle_number_raw": "66307",
+    "alt_number_raw": "77502",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77502"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66308",
+    "vehicle_number_raw": "66308",
+    "alt_number_raw": "77503",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77503"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66309",
+    "vehicle_number_raw": "66309",
+    "alt_number_raw": "77501",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77501"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66310",
+    "vehicle_number_raw": "66310",
+    "alt_number_raw": "77507",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77507"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66311",
+    "vehicle_number_raw": "66311",
+    "alt_number_raw": "77504",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77504"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66312",
+    "vehicle_number_raw": "66312",
+    "alt_number_raw": "266 107-2",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "266 107-2"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66313",
+    "vehicle_number_raw": "66313",
+    "alt_number_raw": "CB1000,266 105-6",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "CB1000",
+      "266 105-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66314",
+    "vehicle_number_raw": "66314",
+    "alt_number_raw": "77506",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77506"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66315",
+    "vehicle_number_raw": "66315",
+    "alt_number_raw": "77505",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "77505"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66316",
+    "vehicle_number_raw": "66316",
+    "alt_number_raw": "1266 015-7,29003",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "1266 015-7",
+      "29003"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66411",
+    "vehicle_number_raw": "66411",
+    "alt_number_raw": "66013, 0066 411-4",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66013",
+      "0066 411-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66412",
+    "vehicle_number_raw": "66412",
+    "alt_number_raw": "66015, 0066 412-2",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66015",
+      "0066 412-2"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66417",
+    "vehicle_number_raw": "66417",
+    "alt_number_raw": "66014, 0066 417-1",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66014",
+      "0066 417-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66526",
+    "vehicle_number_raw": "66526",
+    "alt_number_raw": "66021, 0066 526-9",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66021",
+      "0066 526-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66527",
+    "vehicle_number_raw": "66527",
+    "alt_number_raw": "66016, 0066 527-7",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66016",
+      "0066 527-7"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66529",
+    "vehicle_number_raw": "66529",
+    "alt_number_raw": "66022, 0066 529-3",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66022",
+      "0066 529-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66530",
+    "vehicle_number_raw": "66530",
+    "alt_number_raw": "66017, 0066 530-1",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66017",
+      "0066 530-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66535",
+    "vehicle_number_raw": "66535",
+    "alt_number_raw": "66018, 0066 535-0",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66018",
+      "0066 535-0"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66582",
+    "vehicle_number_raw": "66582",
+    "alt_number_raw": "66009, 3650 010-3",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66009",
+      "3650 010-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66583",
+    "vehicle_number_raw": "66583",
+    "alt_number_raw": "66010, 3650 011-1",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66010",
+      "3650 011-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66584",
+    "vehicle_number_raw": "66584",
+    "alt_number_raw": "66011, 3650 012-9",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66011",
+      "3650 012-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66586",
+    "vehicle_number_raw": "66586",
+    "alt_number_raw": "66008, 3650 009-5",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66008",
+      "3650 009-5"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66595",
+    "vehicle_number_raw": "66595",
+    "alt_number_raw": "66020, 0066 595-4",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66020",
+      "0066 595-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66599",
+    "vehicle_number_raw": "66599",
+    "alt_number_raw": "66023, 0066 599-6",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66023",
+      "0066 599-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66608",
+    "vehicle_number_raw": "66608",
+    "alt_number_raw": "66603, 3650 030-1",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66603",
+      "3650 030-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66609",
+    "vehicle_number_raw": "66609",
+    "alt_number_raw": "66605, 0066 609-3",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66605",
+      "0066 609-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66611",
+    "vehicle_number_raw": "66611",
+    "alt_number_raw": "66604, 0066 611-9",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66604",
+      "0066 611-9"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66612",
+    "vehicle_number_raw": "66612",
+    "alt_number_raw": "66606, 0066 612-7",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66606",
+      "0066 612-7"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66624",
+    "vehicle_number_raw": "66624",
+    "alt_number_raw": "66602, 3650 014-5",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66602",
+      "3650 014-5"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66625",
+    "vehicle_number_raw": "66625",
+    "alt_number_raw": "66601, 3650 013-7",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66601",
+      "3650 013-7"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66651",
+    "vehicle_number_raw": "66651",
+    "alt_number_raw": "66221",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66221"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66652",
+    "vehicle_number_raw": "66652",
+    "alt_number_raw": "66164",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66164"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66653",
+    "vehicle_number_raw": "66653",
+    "alt_number_raw": "66194",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66194"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66654",
+    "vehicle_number_raw": "66654",
+    "alt_number_raw": "66149",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66149"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66655",
+    "vehicle_number_raw": "66655",
+    "alt_number_raw": "66167",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66167"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66656",
+    "vehicle_number_raw": "66656",
+    "alt_number_raw": "66156",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66156"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66657",
+    "vehicle_number_raw": "66657",
+    "alt_number_raw": "66183",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66183"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66658",
+    "vehicle_number_raw": "66658",
+    "alt_number_raw": "66147",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66147"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66659",
+    "vehicle_number_raw": "66659",
+    "alt_number_raw": "66171",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66171"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66660",
+    "vehicle_number_raw": "66660",
+    "alt_number_raw": "66161",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66161"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66671",
+    "vehicle_number_raw": "66671",
+    "alt_number_raw": "66761",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66761"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66682",
+    "vehicle_number_raw": "66682",
+    "alt_number_raw": "66772",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66772"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66686",
+    "vehicle_number_raw": "66686",
+    "alt_number_raw": "66776",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66776"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66687",
+    "vehicle_number_raw": "66687",
+    "alt_number_raw": "66777",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66777"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66689",
+    "vehicle_number_raw": "66689",
+    "alt_number_raw": "66779",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66779"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66693",
+    "vehicle_number_raw": "66693",
+    "alt_number_raw": "29004,66793,66693",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "29004",
+      "66793",
+      "66693"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66694",
+    "vehicle_number_raw": "66694",
+    "alt_number_raw": "29005,66794",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "29005",
+      "66794"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66723",
+    "vehicle_number_raw": "66723",
+    "alt_number_raw": "ZA723",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "ZA723"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66733",
+    "vehicle_number_raw": "66733",
+    "alt_number_raw": "66401",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66401"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66734",
+    "vehicle_number_raw": "66734",
+    "alt_number_raw": "66402",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66402"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66734",
+    "vehicle_number_raw": "66734",
+    "alt_number_raw": "PB04, 266 063-7",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "PB04",
+      "266 063-7"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66735",
+    "vehicle_number_raw": "66735",
+    "alt_number_raw": "66403",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66403"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66736",
+    "vehicle_number_raw": "66736",
+    "alt_number_raw": "66404",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66404"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66737",
+    "vehicle_number_raw": "66737",
+    "alt_number_raw": "66405",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66405"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66738",
+    "vehicle_number_raw": "66738",
+    "alt_number_raw": "66578",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66578"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66739",
+    "vehicle_number_raw": "66739",
+    "alt_number_raw": "66579",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66579"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66740",
+    "vehicle_number_raw": "66740",
+    "alt_number_raw": "66580",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66580"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66741",
+    "vehicle_number_raw": "66741",
+    "alt_number_raw": "66581",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66581"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66742",
+    "vehicle_number_raw": "66742",
+    "alt_number_raw": "66841,66406",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66841",
+      "66406"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66743",
+    "vehicle_number_raw": "66743",
+    "alt_number_raw": "66842,66407",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66842",
+      "66407"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66744",
+    "vehicle_number_raw": "66744",
+    "alt_number_raw": "66843,66408",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66843",
+      "66408"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66745",
+    "vehicle_number_raw": "66745",
+    "alt_number_raw": "66844,66409",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66844",
+      "66409"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66746",
+    "vehicle_number_raw": "66746",
+    "alt_number_raw": "66845,66410",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66845",
+      "66410"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66747",
+    "vehicle_number_raw": "66747",
+    "alt_number_raw": "DE6316,266 286-4",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "DE6316",
+      "266 286-4"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66748",
+    "vehicle_number_raw": "66748",
+    "alt_number_raw": "DE6313,266 283-1",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "DE6313",
+      "266 283-1"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66749",
+    "vehicle_number_raw": "66749",
+    "alt_number_raw": "DE6315,266 285-6",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "DE6315",
+      "266 285-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66750",
+    "vehicle_number_raw": "66750",
+    "alt_number_raw": "6606, 266 025-6",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "6606",
+      "266 025-6"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66751",
+    "vehicle_number_raw": "66751",
+    "alt_number_raw": "6609, 29006, 266 028-0",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "6609",
+      "29006",
+      "266 028-0"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66757",
+    "vehicle_number_raw": "66757",
+    "alt_number_raw": "66667",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66667"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66775",
+    "vehicle_number_raw": "66775",
+    "alt_number_raw": "F231",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "F231"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66780",
+    "vehicle_number_raw": "66780",
+    "alt_number_raw": "66008",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66008"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66781",
+    "vehicle_number_raw": "66781",
+    "alt_number_raw": "66016",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66016"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66782",
+    "vehicle_number_raw": "66782",
+    "alt_number_raw": "66046",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66046"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66783",
+    "vehicle_number_raw": "66783",
+    "alt_number_raw": "66058",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66058"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66784",
+    "vehicle_number_raw": "66784",
+    "alt_number_raw": "66081",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66081"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66785",
+    "vehicle_number_raw": "66785",
+    "alt_number_raw": "66132",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66132"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66786",
+    "vehicle_number_raw": "66786",
+    "alt_number_raw": "66141",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66141"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66787",
+    "vehicle_number_raw": "66787",
+    "alt_number_raw": "66184",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66184"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66788",
+    "vehicle_number_raw": "66788",
+    "alt_number_raw": "66238",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66238"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66789",
+    "vehicle_number_raw": "66789",
+    "alt_number_raw": "66250",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66250"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66790",
+    "vehicle_number_raw": "66790",
+    "alt_number_raw": "T66 403",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "T66 403"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66791",
+    "vehicle_number_raw": "66791",
+    "alt_number_raw": "T66 404",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "T66 404"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66792",
+    "vehicle_number_raw": "66792",
+    "alt_number_raw": "T66 405",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "T66 405"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66795",
+    "vehicle_number_raw": "66795",
+    "alt_number_raw": "561-05,66695",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "561-05",
+      "66695"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66796",
+    "vehicle_number_raw": "66796",
+    "alt_number_raw": "561-01,66696",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "561-01",
+      "66696"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66797",
+    "vehicle_number_raw": "66797",
+    "alt_number_raw": "513-09",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "513-09"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66798",
+    "vehicle_number_raw": "66798",
+    "alt_number_raw": "561-03",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "561-03"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66799",
+    "vehicle_number_raw": "66799",
+    "alt_number_raw": "6602",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "6602"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66846",
+    "vehicle_number_raw": "66846",
+    "alt_number_raw": "66573",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66573"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66847",
+    "vehicle_number_raw": "66847",
+    "alt_number_raw": "66574",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66574"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66848",
+    "vehicle_number_raw": "66848",
+    "alt_number_raw": "66575",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66575"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66849",
+    "vehicle_number_raw": "66849",
+    "alt_number_raw": "66576",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66576"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66850",
+    "vehicle_number_raw": "66850",
+    "alt_number_raw": "66577",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "66577"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66954",
+    "vehicle_number_raw": "66954",
+    "alt_number_raw": "66019, 0066 954-3",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66019",
+      "0066 954-3"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66955",
+    "vehicle_number_raw": "66955",
+    "alt_number_raw": "66024, 0066 955-0",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66024",
+      "0066 955-0"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:66:66956",
+    "vehicle_number_raw": "66956",
+    "alt_number_raw": "66025, 0066 956-8",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "66025",
+      "0066 956-8"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37003",
+    "vehicle_number_raw": "37003",
+    "alt_number_raw": "D6703",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6703"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37010",
+    "vehicle_number_raw": "37010",
+    "alt_number_raw": "D6710",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6710"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37013",
+    "vehicle_number_raw": "37013",
+    "alt_number_raw": "D6713",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6713"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37023",
+    "vehicle_number_raw": "37023",
+    "alt_number_raw": "D6723",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6723"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37025",
+    "vehicle_number_raw": "37025",
+    "alt_number_raw": "D6725",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6725"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37038",
+    "vehicle_number_raw": "37038",
+    "alt_number_raw": "D6738",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6738"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37047",
+    "vehicle_number_raw": "37047",
+    "alt_number_raw": "D6747",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6747"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37057",
+    "vehicle_number_raw": "37057",
+    "alt_number_raw": "D6757",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6757"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37059",
+    "vehicle_number_raw": "37059",
+    "alt_number_raw": "D6759",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6759"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37065",
+    "vehicle_number_raw": "37065",
+    "alt_number_raw": "D6765",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6765"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37069",
+    "vehicle_number_raw": "37069",
+    "alt_number_raw": "D6769",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6769"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37072",
+    "vehicle_number_raw": "37072",
+    "alt_number_raw": "D6772",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6772"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37075",
+    "vehicle_number_raw": "37075",
+    "alt_number_raw": "D6775",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6775"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37077",
+    "vehicle_number_raw": "37077",
+    "alt_number_raw": "D6777",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6777"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37087",
+    "vehicle_number_raw": "37087",
+    "alt_number_raw": "D6787",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6787"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37097",
+    "vehicle_number_raw": "37097",
+    "alt_number_raw": "D6797",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6797"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37109",
+    "vehicle_number_raw": "37109",
+    "alt_number_raw": "D6809",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6809"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37116",
+    "vehicle_number_raw": "37116",
+    "alt_number_raw": "D6816",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6816"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37142",
+    "vehicle_number_raw": "37142",
+    "alt_number_raw": "D6842",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6842"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37146",
+    "vehicle_number_raw": "37146",
+    "alt_number_raw": "D6846",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6846"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37174",
+    "vehicle_number_raw": "37174",
+    "alt_number_raw": "D6874",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6874"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37175",
+    "vehicle_number_raw": "37175",
+    "alt_number_raw": "D6875",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6875"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37188",
+    "vehicle_number_raw": "37188",
+    "alt_number_raw": "D6888",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6888"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37194",
+    "vehicle_number_raw": "37194",
+    "alt_number_raw": "D6894",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6894"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37197",
+    "vehicle_number_raw": "37197",
+    "alt_number_raw": "D6897",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6897"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37198",
+    "vehicle_number_raw": "37198",
+    "alt_number_raw": "D6898",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6898"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37201",
+    "vehicle_number_raw": "37201",
+    "alt_number_raw": "D6901",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6901"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37203",
+    "vehicle_number_raw": "37203",
+    "alt_number_raw": "D6903",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6903"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37207",
+    "vehicle_number_raw": "37207",
+    "alt_number_raw": "D6907",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6907"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37215",
+    "vehicle_number_raw": "37215",
+    "alt_number_raw": "D6915",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6915"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37216",
+    "vehicle_number_raw": "37216",
+    "alt_number_raw": "D6916",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6916"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37218",
+    "vehicle_number_raw": "37218",
+    "alt_number_raw": "D6918",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6918"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37219",
+    "vehicle_number_raw": "37219",
+    "alt_number_raw": "D6919",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6919"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37220",
+    "vehicle_number_raw": "37220",
+    "alt_number_raw": "D6920",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6920"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37227",
+    "vehicle_number_raw": "37227",
+    "alt_number_raw": "D6927",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6927"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37229",
+    "vehicle_number_raw": "37229",
+    "alt_number_raw": "D6929",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6929"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37235",
+    "vehicle_number_raw": "37235",
+    "alt_number_raw": "D6935",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6935"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37240",
+    "vehicle_number_raw": "37240",
+    "alt_number_raw": "6940,D6940",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "6940",
+      "D6940"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37242",
+    "vehicle_number_raw": "37242",
+    "alt_number_raw": "D6942",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6942"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37248",
+    "vehicle_number_raw": "37248",
+    "alt_number_raw": "D6948",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6948"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37250",
+    "vehicle_number_raw": "37250",
+    "alt_number_raw": "D6950",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6950"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37254",
+    "vehicle_number_raw": "37254",
+    "alt_number_raw": "D6954",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6954"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37255",
+    "vehicle_number_raw": "37255",
+    "alt_number_raw": "D6955",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6955"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37261",
+    "vehicle_number_raw": "37261",
+    "alt_number_raw": "D6961",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6961"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37263",
+    "vehicle_number_raw": "37263",
+    "alt_number_raw": "D6963",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6963"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37264",
+    "vehicle_number_raw": "37264",
+    "alt_number_raw": "D6964",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6964"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:37294",
+    "vehicle_number_raw": "37294",
+    "alt_number_raw": "D6994",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D6994"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:D6729",
+    "vehicle_number_raw": "D6729",
+    "alt_number_raw": "37029",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "37029"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:37:6975",
+    "vehicle_number_raw": "6975",
+    "alt_number_raw": "37275,D37275",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "37275",
+      "D37275"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1501",
+    "vehicle_number_raw": "D1501",
+    "alt_number_raw": "47402",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "47402"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:1662",
+    "vehicle_number_raw": "1662",
+    "alt_number_raw": "D47484,47484",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "D47484",
+      "47484"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1924",
+    "vehicle_number_raw": "D1924",
+    "alt_number_raw": "47655,47247,47810",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47655",
+      "47247",
+      "47810"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1935",
+    "vehicle_number_raw": "D1935",
+    "alt_number_raw": "47650,47257,47805",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47650",
+      "47257",
+      "47805"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1944",
+    "vehicle_number_raw": "D1944",
+    "alt_number_raw": "47501",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "47501"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47004",
+    "vehicle_number_raw": "47004",
+    "alt_number_raw": "D1524",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1524"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47033",
+    "vehicle_number_raw": "47033",
+    "alt_number_raw": "D1613",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1613"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47053",
+    "vehicle_number_raw": "47053",
+    "alt_number_raw": "D1635",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1635"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47105",
+    "vehicle_number_raw": "47105",
+    "alt_number_raw": "D1693",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1693"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47145",
+    "vehicle_number_raw": "47145",
+    "alt_number_raw": "D1738",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1738"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47192",
+    "vehicle_number_raw": "47192",
+    "alt_number_raw": "D1842",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1842"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47194",
+    "vehicle_number_raw": "47194",
+    "alt_number_raw": "D1844",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1844"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47197",
+    "vehicle_number_raw": "47197",
+    "alt_number_raw": "D1847",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1847"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47200",
+    "vehicle_number_raw": "47200",
+    "alt_number_raw": "D1850",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1850"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47205",
+    "vehicle_number_raw": "47205",
+    "alt_number_raw": "47395,D1855",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47395",
+      "D1855"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47212",
+    "vehicle_number_raw": "47212",
+    "alt_number_raw": "D1862",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1862"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47224",
+    "vehicle_number_raw": "47224",
+    "alt_number_raw": "D1874",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1874"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47229",
+    "vehicle_number_raw": "47229",
+    "alt_number_raw": "D1905",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1905"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47236",
+    "vehicle_number_raw": "47236",
+    "alt_number_raw": "D1913",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1913"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47237",
+    "vehicle_number_raw": "47237",
+    "alt_number_raw": "D1914",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1914"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47245",
+    "vehicle_number_raw": "47245",
+    "alt_number_raw": "D1922",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1922"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47270",
+    "vehicle_number_raw": "47270",
+    "alt_number_raw": "D1971",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1971"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47285",
+    "vehicle_number_raw": "47285",
+    "alt_number_raw": "D1987",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1987"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47289",
+    "vehicle_number_raw": "47289",
+    "alt_number_raw": "D1991",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1991"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47292",
+    "vehicle_number_raw": "47292",
+    "alt_number_raw": "D1994",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1994"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47298",
+    "vehicle_number_raw": "47298",
+    "alt_number_raw": "D1100",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1100"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47306",
+    "vehicle_number_raw": "47306",
+    "alt_number_raw": "D1787",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1787"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47309",
+    "vehicle_number_raw": "47309",
+    "alt_number_raw": "47389,D1790",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47389",
+      "D1790"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47316",
+    "vehicle_number_raw": "47316",
+    "alt_number_raw": "D1797",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1797"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47326",
+    "vehicle_number_raw": "47326",
+    "alt_number_raw": "D1807",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1807"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47338",
+    "vehicle_number_raw": "47338",
+    "alt_number_raw": "D1819",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1819"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47355",
+    "vehicle_number_raw": "47355",
+    "alt_number_raw": "47391,D1836",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47391",
+      "D1836"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47363",
+    "vehicle_number_raw": "47363",
+    "alt_number_raw": "47385,D1882",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47385",
+      "D1882"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47365",
+    "vehicle_number_raw": "47365",
+    "alt_number_raw": "D1884",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1884"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47367",
+    "vehicle_number_raw": "47367",
+    "alt_number_raw": "D1886",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1886"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47368",
+    "vehicle_number_raw": "47368",
+    "alt_number_raw": "D1887",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1887"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47370",
+    "vehicle_number_raw": "47370",
+    "alt_number_raw": "D1889",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1889"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47375",
+    "vehicle_number_raw": "47375",
+    "alt_number_raw": "D1894,047 375-5",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "D1894",
+      "047 375-5"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47376",
+    "vehicle_number_raw": "47376",
+    "alt_number_raw": "D1895",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1895"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47401",
+    "vehicle_number_raw": "47401",
+    "alt_number_raw": "D1500,1500",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "D1500",
+      "1500"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47402",
+    "vehicle_number_raw": "47402",
+    "alt_number_raw": "D1705,47117,1705",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "D1705",
+      "47117",
+      "1705"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47417",
+    "vehicle_number_raw": "47417",
+    "alt_number_raw": "D1516",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1516"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47449",
+    "vehicle_number_raw": "47449",
+    "alt_number_raw": "D1566",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1566"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47478",
+    "vehicle_number_raw": "47478",
+    "alt_number_raw": "D1608",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1608"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47488",
+    "vehicle_number_raw": "47488",
+    "alt_number_raw": "D1713",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1713"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47489",
+    "vehicle_number_raw": "47489",
+    "alt_number_raw": "D1716",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1716"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47492",
+    "vehicle_number_raw": "47492",
+    "alt_number_raw": "D1760",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1760"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47500",
+    "vehicle_number_raw": "47500",
+    "alt_number_raw": "47770,D1943",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47770",
+      "D1943"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47524",
+    "vehicle_number_raw": "47524",
+    "alt_number_raw": "D1107",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1107"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47525",
+    "vehicle_number_raw": "47525",
+    "alt_number_raw": "D1108",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1108"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47526",
+    "vehicle_number_raw": "47526",
+    "alt_number_raw": "D1109",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1109"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47528",
+    "vehicle_number_raw": "47528",
+    "alt_number_raw": "D1111",
+    "alt_number_count": 1,
+    "parsed_alt_numbers": [
+      "D1111"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47540",
+    "vehicle_number_raw": "47540",
+    "alt_number_raw": "47975,D1723",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47975",
+      "D1723"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47555",
+    "vehicle_number_raw": "47555",
+    "alt_number_raw": "47631,47059,D1643,47765",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47631",
+      "47059",
+      "D1643",
+      "47765"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47575",
+    "vehicle_number_raw": "47575",
+    "alt_number_raw": "47175,D1770",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47175",
+      "D1770"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47580",
+    "vehicle_number_raw": "47580",
+    "alt_number_raw": "47167,D1762,47732",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47167",
+      "D1762",
+      "47732"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47593",
+    "vehicle_number_raw": "47593",
+    "alt_number_raw": "47673,47790,47272,D1973",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47673",
+      "47790",
+      "47272",
+      "D1973"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47596",
+    "vehicle_number_raw": "47596",
+    "alt_number_raw": "47255,D1933",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47255",
+      "D1933"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47614",
+    "vehicle_number_raw": "47614",
+    "alt_number_raw": "47853,47141,D1733",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47853",
+      "47141",
+      "D1733"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47628",
+    "vehicle_number_raw": "47628",
+    "alt_number_raw": "47078,D1663",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47078",
+      "D1663"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47635",
+    "vehicle_number_raw": "47635",
+    "alt_number_raw": "47029,D1606",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47029",
+      "D1606"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47640",
+    "vehicle_number_raw": "47640",
+    "alt_number_raw": "47244,D1921",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47244",
+      "D1921"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47643",
+    "vehicle_number_raw": "47643",
+    "alt_number_raw": "47269,D1970",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47269",
+      "D1970"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47701",
+    "vehicle_number_raw": "47701",
+    "alt_number_raw": "47493,D1932",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47493",
+      "D1932"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47703",
+    "vehicle_number_raw": "47703",
+    "alt_number_raw": "47514,D1960",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47514",
+      "D1960"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47707",
+    "vehicle_number_raw": "47707",
+    "alt_number_raw": "47506,D1949",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47506",
+      "D1949"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47709",
+    "vehicle_number_raw": "47709",
+    "alt_number_raw": "47499,D1942",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47499",
+      "D1942"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47712",
+    "vehicle_number_raw": "47712",
+    "alt_number_raw": "47505,D1948",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47505",
+      "D1948"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47713",
+    "vehicle_number_raw": "47713",
+    "alt_number_raw": "47510,D1954",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47510",
+      "D1954"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47714",
+    "vehicle_number_raw": "47714",
+    "alt_number_raw": "47511,D1955",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47511",
+      "D1955"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47715",
+    "vehicle_number_raw": "47715",
+    "alt_number_raw": "47502,D1945",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47502",
+      "D1945"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47716",
+    "vehicle_number_raw": "47716",
+    "alt_number_raw": "47507,D1951",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47507",
+      "D1951"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47717",
+    "vehicle_number_raw": "47717",
+    "alt_number_raw": "47497,D1940",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47497",
+      "D1940"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47721",
+    "vehicle_number_raw": "47721",
+    "alt_number_raw": "47557,47024,D1591",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47557",
+      "47024",
+      "D1591"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47722",
+    "vehicle_number_raw": "47722",
+    "alt_number_raw": "47558,47027,D1599",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47558",
+      "47027",
+      "D1599"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47725",
+    "vehicle_number_raw": "47725",
+    "alt_number_raw": "47567,47044,D1625",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47567",
+      "47044",
+      "D1625"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47726",
+    "vehicle_number_raw": "47726",
+    "alt_number_raw": "47568,47045,D1626",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47568",
+      "47045",
+      "D1626"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47727",
+    "vehicle_number_raw": "47727",
+    "alt_number_raw": "47569,47047,D1629",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47569",
+      "47047",
+      "D1629"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47733",
+    "vehicle_number_raw": "47733",
+    "alt_number_raw": "47582,47170,D1765",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47582",
+      "47170",
+      "D1765"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47737",
+    "vehicle_number_raw": "47737",
+    "alt_number_raw": "47588,47178,D1773",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47588",
+      "47178",
+      "D1773"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47739",
+    "vehicle_number_raw": "47739",
+    "alt_number_raw": "47594,47035,D1615",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47594",
+      "47035",
+      "D1615"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47741",
+    "vehicle_number_raw": "47741",
+    "alt_number_raw": "47597,47026,D1597",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47597",
+      "47026",
+      "D1597"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47744",
+    "vehicle_number_raw": "47744",
+    "alt_number_raw": "47600,47250,D1927",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47600",
+      "47250",
+      "D1927"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47746",
+    "vehicle_number_raw": "47746",
+    "alt_number_raw": "47605,47160,D1754",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47605",
+      "47160",
+      "D1754"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47747",
+    "vehicle_number_raw": "47747",
+    "alt_number_raw": "47615,47252,D1929",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47615",
+      "47252",
+      "D1929"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47749",
+    "vehicle_number_raw": "47749",
+    "alt_number_raw": "47625,47076,D1660",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47625",
+      "47076",
+      "D1660"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47750",
+    "vehicle_number_raw": "47750",
+    "alt_number_raw": "47626,47082,D1667",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47626",
+      "47082",
+      "D1667"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47760",
+    "vehicle_number_raw": "47760",
+    "alt_number_raw": "47672,47562,47036,D1617",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47672",
+      "47562",
+      "47036",
+      "D1617"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47761",
+    "vehicle_number_raw": "47761",
+    "alt_number_raw": "47564,47038,D1619",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47564",
+      "47038",
+      "D1619"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47768",
+    "vehicle_number_raw": "47768",
+    "alt_number_raw": "47490,D1725",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47490",
+      "D1725"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47769",
+    "vehicle_number_raw": "47769",
+    "alt_number_raw": "47491,D1753",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47491",
+      "D1753"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47771",
+    "vehicle_number_raw": "47771",
+    "alt_number_raw": "47503,D1946",
+    "alt_number_count": 2,
+    "parsed_alt_numbers": [
+      "47503",
+      "D1946"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47772",
+    "vehicle_number_raw": "47772",
+    "alt_number_raw": "47537,47073,D1657",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47537",
+      "47073",
+      "D1657"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47773",
+    "vehicle_number_raw": "47773",
+    "alt_number_raw": "47541,47161,D1755",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47541",
+      "47161",
+      "D1755"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47776",
+    "vehicle_number_raw": "47776",
+    "alt_number_raw": "47578,47181,D1776",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47578",
+      "47181",
+      "D1776"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47780",
+    "vehicle_number_raw": "47780",
+    "alt_number_raw": "47836,47618,47030,D1609",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47836",
+      "47618",
+      "47030",
+      "D1609"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47782",
+    "vehicle_number_raw": "47782",
+    "alt_number_raw": "47824,47602,47185,D1780",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47824",
+      "47602",
+      "47185",
+      "D1780"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47785",
+    "vehicle_number_raw": "47785",
+    "alt_number_raw": "47820,47665,47232,D1909",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47820",
+      "47665",
+      "47232",
+      "D1909"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47786",
+    "vehicle_number_raw": "47786",
+    "alt_number_raw": "47821,47607,47138,D1730",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47821",
+      "47607",
+      "47138",
+      "D1730"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47787",
+    "vehicle_number_raw": "47787",
+    "alt_number_raw": "47823,47610,47163,D1757",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47823",
+      "47610",
+      "47163",
+      "D1757"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47791",
+    "vehicle_number_raw": "47791",
+    "alt_number_raw": "47675,47595,47268,D1969",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47675",
+      "47595",
+      "47268",
+      "D1969"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47793",
+    "vehicle_number_raw": "47793",
+    "alt_number_raw": "47579,47183,D1778",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47579",
+      "47183",
+      "D1778"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47798",
+    "vehicle_number_raw": "47798",
+    "alt_number_raw": "47834,47609,47072,D1656",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47834",
+      "47609",
+      "47072",
+      "D1656"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47799",
+    "vehicle_number_raw": "47799",
+    "alt_number_raw": "47835,47620,47070,D1654",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47835",
+      "47620",
+      "47070",
+      "D1654"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47802",
+    "vehicle_number_raw": "47802",
+    "alt_number_raw": "47552,47259,D1950",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47552",
+      "47259",
+      "D1950"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47804",
+    "vehicle_number_raw": "47804",
+    "alt_number_raw": "47792,47591,47265,D1965",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47792",
+      "47591",
+      "47265",
+      "D1965"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47811",
+    "vehicle_number_raw": "47811",
+    "alt_number_raw": "47656,47128,D1719",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47656",
+      "47128",
+      "D1719"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47812",
+    "vehicle_number_raw": "47812",
+    "alt_number_raw": "47657,47239,D1916",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47657",
+      "47239",
+      "D1916"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47813",
+    "vehicle_number_raw": "47813",
+    "alt_number_raw": "47658,47129,D1720",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47658",
+      "47129",
+      "D1720"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47815",
+    "vehicle_number_raw": "47815",
+    "alt_number_raw": "47660,47155,D1748",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47660",
+      "47155",
+      "D1748"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47816",
+    "vehicle_number_raw": "47816",
+    "alt_number_raw": "47661,47066,D1650",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47661",
+      "47066",
+      "D1650"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47818",
+    "vehicle_number_raw": "47818",
+    "alt_number_raw": "47663,47240,D1917",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47663",
+      "47240",
+      "D1917"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47826",
+    "vehicle_number_raw": "47826",
+    "alt_number_raw": "47637,47274,D1976",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47637",
+      "47274",
+      "D1976"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47828",
+    "vehicle_number_raw": "47828",
+    "alt_number_raw": "47629,47266,D1966",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47629",
+      "47266",
+      "D1966"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47829",
+    "vehicle_number_raw": "47829",
+    "alt_number_raw": "47619,47264,D1964",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47619",
+      "47264",
+      "D1964"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47830",
+    "vehicle_number_raw": "47830",
+    "alt_number_raw": "47649,47061,D1645",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47649",
+      "47061",
+      "D1645"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47832",
+    "vehicle_number_raw": "47832",
+    "alt_number_raw": "47560,47031,D1610",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47560",
+      "47031",
+      "D1610"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47839",
+    "vehicle_number_raw": "47839",
+    "alt_number_raw": "47621,47136,D1728",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47621",
+      "47136",
+      "D1728"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47840",
+    "vehicle_number_raw": "47840",
+    "alt_number_raw": "47613,47077,D1661",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47613",
+      "47077",
+      "D1661"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47841",
+    "vehicle_number_raw": "47841",
+    "alt_number_raw": "47622,47134,D1726",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47622",
+      "47134",
+      "D1726"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47843",
+    "vehicle_number_raw": "47843",
+    "alt_number_raw": "47623,47090,D1676",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47623",
+      "47090",
+      "D1676"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47847",
+    "vehicle_number_raw": "47847",
+    "alt_number_raw": "47577,47179,D1774",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47577",
+      "47179",
+      "D1774"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47848",
+    "vehicle_number_raw": "47848",
+    "alt_number_raw": "47632,47068,D1652",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47632",
+      "47068",
+      "D1652"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47851",
+    "vehicle_number_raw": "47851",
+    "alt_number_raw": "47639,47064,D1648",
+    "alt_number_count": 3,
+    "parsed_alt_numbers": [
+      "47639",
+      "47064",
+      "D1648"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47854",
+    "vehicle_number_raw": "47854",
+    "alt_number_raw": "47604,47674,47271,D1972",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "47604",
+      "47674",
+      "47271",
+      "D1972"
+    ]
+  },
+  {
+    "staging_id": "GB:spotlog:47:47972",
+    "vehicle_number_raw": "47972",
+    "alt_number_raw": "97545,47545,47062,D1646",
+    "alt_number_count": 4,
+    "parsed_alt_numbers": [
+      "97545",
+      "47545",
+      "47062",
+      "D1646"
+    ]
+  }
+]

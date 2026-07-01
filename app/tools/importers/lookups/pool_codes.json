@@ -1,0 +1,361 @@
+{
+  "_meta": {
+    "description": "Pool code lookup for SpotLog UK staging data",
+    "version": "1.0.0",
+    "created": "2026-06-27",
+    "updated": "2026-06-27",
+    "source": "RCTS Features \u2014 Locomotive Pool Codes (features.rcts.org.uk/locomotives/locomotive-pool-codes/)",
+    "total_codes": 58,
+    "rcts_confirmed": 51,
+    "inferred": 7,
+    "unresolved": 0
+  },
+  "WBAT": {
+    "operator": "DB Cargo UK - Regular Fleet",
+    "description": "DB Cargo UK - Regular Fleet, TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WGEA": {
+    "operator": "DB Cargo France",
+    "description": "DB Cargo France, AZ/TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo France"
+  },
+  "MBDL": {
+    "operator": "RES - Special Trains Charter",
+    "description": "RES - Special Trains Charter, Private Owner Diesel Locos",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Special Trains (charter/hire)"
+  },
+  "DFIM": {
+    "operator": "Freightliner Ltd",
+    "description": "Freightliner Ltd, Intermodal, Modified FD/LD Cl.66/5",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner"
+  },
+  "GBBT": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, JT42 Standard Cab, Big Fuel Tank, PG/RS Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "WGER": {
+    "operator": "DB Cargo Germany",
+    "description": "DB Cargo Germany - European Fleet",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo Germany"
+  },
+  "DHLT": {
+    "operator": "Freightliner Ltd",
+    "description": "Freightliner Ltd, Contingency Serviceable (Used for Polish Fleet and Stored Locos)",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner"
+  },
+  "GBLT": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, JT42 Standard Cab, Little Fuel Tank, DR/RS Cl.66/3 &amp; PG Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "GBEB": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, JT42 Euro Cab, Big Fuel Tank, PG/RS Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "DDHM": {
+    "operator": "Freightliner Heavy Haul Ltd",
+    "description": "Freightliner Heavy Haul Ltd, Large Tanker, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner Heavy Haul"
+  },
+  "GBEL": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, JT42 Euro Cab, Little Fuel Tank, PG Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "DDHS": {
+    "operator": "Freightliner Heavy Haul Ltd, 60MPH",
+    "description": "Freightliner Heavy Haul Ltd, 60MPH, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner Heavy Haul Ltd, 60MPH"
+  },
+  "WGEP": {
+    "operator": "DB Cargo Poland",
+    "description": "DB Cargo Poland, PN Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo Poland"
+  },
+  "AWCA": {
+    "operator": "West Coast Railway Company",
+    "description": "West Coast Railway Company, Diesel &amp; Electric Locomotives Fleet, CO/CS/HQ/LM Cl.33, 37, 47, 57 &amp; 86",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "West Coast Railway Company"
+  },
+  "DDHN": {
+    "operator": "Freightliner Heavy Haul Ltd",
+    "description": "Freightliner Heavy Haul Ltd, Small Tanker, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner Heavy Haul"
+  },
+  "WQNC": {
+    "operator": "DB Cargo UK",
+    "description": "DB Cargo UK - Stored (variant)",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "XHIM": {
+    "operator": "Private Owner - Direct Rail Services",
+    "description": "Private Owner - Direct Rail Services, Intermodal, TO Cl.66/0 &amp; KM Cl.66/4",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Direct Rail Services"
+  },
+  "WBHT": {
+    "operator": "DB Cargo UK",
+    "description": "DB Cargo UK - Heavy Traffic",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "COLO": {
+    "operator": "Colas Rail Limited",
+    "description": "Colas Rail Limited, Operational Locos, RU Cl.66/8 &amp; HQ Cl.70",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Colas Rail"
+  },
+  "WBGT": {
+    "operator": "DB Cargo UK",
+    "description": "DB Cargo UK - RETB/General Traffic",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "GBHH": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, Heavy Haul, RS Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "GBOB": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, Buckeye Fitted, Big Fuel Tanks, Original Series, RS Cl.66/0",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "LSLO": {
+    "operator": "Locomotive Services Ltd",
+    "description": "Locomotive Services Ltd, Operational Fleet, CD/CS/HQ/KM Cl.08, 20, 37, 40, 47, 57, 86, 87, 90 &amp; 98",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Locomotive Services Ltd"
+  },
+  "WFMS": {
+    "operator": "DB Cargo UK - Holding Pool Pending Sandite Use",
+    "description": "DB Cargo UK - Holding Pool Pending Sandite Use",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "GBFM": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, RETB, PG Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "WBAI": {
+    "operator": "DB Cargo UK - Industrial",
+    "description": "DB Cargo UK - Industrial, Standard, TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "COTS": {
+    "operator": "Colas Rail Limited",
+    "description": "Colas Rail Limited, BT/CD/HQ/KM/RU Cl.37 &amp; HQ Cl.43",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Colas Rail"
+  },
+  "WBRT": {
+    "operator": "DB Cargo UK - RHTT Fleet",
+    "description": "DB Cargo UK - RHTT Fleet, TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "DFIN": {
+    "operator": "Freightliner Ltd",
+    "description": "Freightliner Ltd, Intermodal, Low Emission,1299 Fuel Capacity FD/HQ Cl.66/4, 66/5 &amp; 66/9",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner"
+  },
+  "GBNB": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, New Builds, PG Cl.66/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "AWCX": {
+    "operator": "West Coast Railway Company",
+    "description": "West Coast Railway Company, Stored Locomotives Fleet, CS Cl.08, 33, 37, 47 &amp; 57",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "West Coast Railway Company"
+  },
+  "WBET": {
+    "operator": "DB Cargo UK",
+    "description": "DB Cargo UK - Regular Fleet (variant)",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WBLT": {
+    "operator": "DB Cargo UK - Lickey Coupling Modified",
+    "description": "DB Cargo UK - Lickey Coupling Modified, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WBBT": {
+    "operator": "DB Cargo UK - RETB Fitted",
+    "description": "DB Cargo UK - RETB Fitted, TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "DDHJ": {
+    "operator": "Freightliner Heavy Haul Ltd",
+    "description": "Freightliner Heavy Haul Ltd, Limited Mileage, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner Heavy Haul"
+  },
+  "HNRS": {
+    "operator": "TOC - Harry Needle Rail",
+    "description": "TOC - Harry Needle Rail, Stored Locos, BH/HQ Cl.07, 08, 09, 20, 37, 47/7 &amp; 57",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Harry Needle Railroad Company"
+  },
+  "NRLS": {
+    "operator": "Nemesis Rail",
+    "description": "Nemesis Rail, Stored Fleet, BH Cl.31; BO Cl.33, 37 &amp; 47",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Nemesis Rail"
+  },
+  "GBDF": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, Cl.47 On Hire, PG Cl.47/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "WQBA": {
+    "operator": "DB Cargo UK - Stored Group 2",
+    "description": "DB Cargo UK - Stored Group 2, All Classes",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WBVT": {
+    "operator": "DB Cargo UK",
+    "description": "DB Cargo UK - Vacuum Fitted",
+    "confidence": "inferred",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "EPUK": {
+    "operator": "EuroPhoenix Locos - For UK",
+    "description": "EuroPhoenix Locos - For UK, HQ/LR Cl.08, 37/0 &amp; 37/9",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "EuroPhoenix"
+  },
+  "RAJV": {
+    "operator": "SRPS",
+    "description": "SRPS, Private Owner Diesel Fleet, BT Cl.20, 25, 26, 27, 37 &amp; 47",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Scottish Railway Preservation Society"
+  },
+  "NRLO": {
+    "operator": "Nemesis Rail",
+    "description": "Nemesis Rail, Operational Fleet, BH Cl.33; BO Cl.31, 45, 47 &amp; 73",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Nemesis Rail"
+  },
+  "SROG": {
+    "operator": "Rail Operations Group - Locos Under Overhaul",
+    "description": "Rail Operations Group - Locos Under Overhaul, LR Cl.47/8",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Rail Operations Group"
+  },
+  "WQDA": {
+    "operator": "DB Cargo UK - Stored Group 4",
+    "description": "DB Cargo UK - Stored Group 4, All Classes (Locos Stored Surplus)",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WQAA": {
+    "operator": "DB Cargo UK - Stored Group 1A",
+    "description": "DB Cargo UK - Stored Group 1A, All Classes",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WBST": {
+    "operator": "DB Cargo UK - Network",
+    "description": "DB Cargo UK - Network, Sandite - Trip Cock Fitted, Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WBAR": {
+    "operator": "DB Cargo UK - Remote Monitoring Equipment",
+    "description": "DB Cargo UK - Remote Monitoring Equipment, TO Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "WQCA": {
+    "operator": "DB Cargo UK - Stored Group 3",
+    "description": "DB Cargo UK - Stored Group 3, All Classes",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "DB Cargo UK"
+  },
+  "GBSD": {
+    "operator": "GB Railfreight",
+    "description": "GB Railfreight, Scottish Delivery (Used for Stored HQ Cl.92)",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "GBRf"
+  },
+  "DFHJ": {
+    "operator": "Freightliner Heavy Haul Ltd",
+    "description": "Freightliner Heavy Haul Ltd, FD Cl.66",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner Heavy Haul"
+  },
+  "HHLT": {
+    "operator": "Harry Needle Railroad Company",
+    "description": "HNRC Stored/Disposal Fleet",
+    "confidence": "inferred",
+    "operator_canonical": "Harry Needle Railroad Company"
+  },
+  "DFLS": {
+    "operator": "Freightliner Ltd",
+    "description": "Freightliner Ltd, T.B.A. Cl.08",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Freightliner"
+  },
+  "COLS": {
+    "operator": "Colas Rail Limited",
+    "description": "Colas Rail Limited, Stored Locos",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Colas Rail"
+  },
+  "FAMT": {
+    "operator": "Private Owner - 37679",
+    "description": "Private Owner - 37679, HQ Cl.37",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Private Owner"
+  },
+  "TTLS": {
+    "operator": "Traditional Traction Ltd",
+    "description": "Traditional Traction Ltd, WA Cl.08, 20 &amp; 47/4",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Traditional Traction Ltd"
+  },
+  "HNRL": {
+    "operator": "TOC - Harry Needle Rail",
+    "description": "TOC - Harry Needle Rail, BH/HQ/KM Cl.08, 09, 20, 31, 37 &amp; 47/7",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Harry Needle Railroad Company"
+  },
+  "LSLS": {
+    "operator": "Locomotive Services Ltd",
+    "description": "Locomotive Services Ltd, Stored Fleet, CD/HQ/WI Cl.08, 45, 47, 89/5 &amp; 98",
+    "confidence": "rcts_confirmed",
+    "operator_canonical": "Locomotive Services Ltd"
+  }
+}

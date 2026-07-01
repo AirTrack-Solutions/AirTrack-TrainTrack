@@ -1,0 +1,764 @@
+[
+  {
+    "staging_id": "GB:spotlog:66:66002",
+    "name_raw": "Lafarge Quorn**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66022",
+    "name_raw": "Lafarge Charnwood**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66042",
+    "name_raw": "Lafarge Buddon Wood**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66048",
+    "name_raw": "James the Engine**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66050",
+    "name_raw": "EWS Energy**,Yorkshire Rose",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66074",
+    "name_raw": "Teesport Express**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66200",
+    "name_raw": "RAILWAY HERITAGE COMMITTEE**,The Jeremy Vine Show",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66301",
+    "name_raw": "Drax Power Station 50, Kingmoor TMD**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66303",
+    "name_raw": "Rail Riders 2020**,Preston North End",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66411",
+    "name_raw": "Eddie the Engine**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66414",
+    "name_raw": "James the Engine**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66501",
+    "name_raw": ",JAPAN 2001**,Spirit of '65 - Celebrating 60 years of Freightliner",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66502",
+    "name_raw": "Basford Hall Centenary 2001**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66503",
+    "name_raw": "The RAILWAY MAGAZINE,Celebrating 125 Yaers 1897-2022",
+    "contains_double_star": false,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66506",
+    "name_raw": "Crewe Regeneration**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66527",
+    "name_raw": "Don Raider Raider Class**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66587",
+    "name_raw": "AS ONE, WE CAN",
+    "contains_double_star": false,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66601",
+    "name_raw": "The Hope Valley**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66612",
+    "name_raw": "Forth Raider**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66623",
+    "name_raw": "Bill Bolsover**,Lest We Forget",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66693",
+    "name_raw": "Dave Meehan**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66701",
+    "name_raw": "Whitemoor**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66710",
+    "name_raw": "Phil Packer BRIT**,Karen Harrison",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66718",
+    "name_raw": "Gwyneth Dunwoody**,Sir Peter Hendy of Richmond Hill of Imber in the County of wiltshire",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66719",
+    "name_raw": "METRO-LAND**,Michael Portillo",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66720",
+    "name_raw": "Metronet Pathfinder**,Wascosa",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66728",
+    "name_raw": "Institution of Railway Operators**,Chartered Institution of Railway Operators Celebrating 25 years",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66734",
+    "name_raw": "The Eco Express**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66744",
+    "name_raw": "Heart of Wales, Crossrail**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66745",
+    "name_raw": "Modern Railways The first 50 years**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:66:66748",
+    "name_raw": "St. Michael's Mount, West Burton 50*",
+    "contains_double_star": false,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66778",
+    "name_raw": "Cambois Depot 25 Years, Darius Cheskin**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:66:66791",
+    "name_raw": "Neil Bennett**,Settle & Carlisle 150",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:37003",
+    "name_raw": "Dereham Neatherd High School 1912-2012**, Tiger Moth**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:37013",
+    "name_raw": "Vampire**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37023",
+    "name_raw": "Stratford TMD**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37025",
+    "name_raw": "Inverness TMD**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37057",
+    "name_raw": "Viking**, Barbara Arbon",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:37059",
+    "name_raw": "Port of Tilbury**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37069",
+    "name_raw": "Thornaby TMD**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37072",
+    "name_raw": "Venom**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37077",
+    "name_raw": "Hurricane**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37087",
+    "name_raw": "Vulcan**, Avro Vulcan B1 & B2**, Keighley & Worth Valley Railway**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:37:37116",
+    "name_raw": "Comet**, Sister Dora**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:37175",
+    "name_raw": "W.S. Sellar**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37188",
+    "name_raw": "Jimmy Shand**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37194",
+    "name_raw": "Neil Webster 1957-2001**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37197",
+    "name_raw": "Loch Laidon**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37201",
+    "name_raw": "Saint Margaret**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37219",
+    "name_raw": "Shirley Ann Smith**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37220",
+    "name_raw": "Westerleigh**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37229",
+    "name_raw": "Loch Arkaig**, The Cardiff Rod Mill**, Jonty Jarvis 8-12-1998 to 18-3-2005**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:37:37235",
+    "name_raw": "The Coal Merchants' Association of Scotland**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:37:37248",
+    "name_raw": "Loch Arkaig**, Midland Railway Centre**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:37261",
+    "name_raw": "Loch Arkaig**, Caithness**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:37:6975",
+    "name_raw": "Stainless Pioneer**, Oor Wullie**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1924",
+    "name_raw": "Porterbrook**, Captain Sensible**, Peter Bath MBE 1927-2006, Crewe Diesel Depot",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:D1935",
+    "name_raw": "Bristol Bath Road**, Pride of Toton**, Talisman**, John Scott 12.5.45-22.5.12**,Roger Hosking MA 1925-2013",
+    "contains_double_star": true,
+    "parsed_name_count": 5
+  },
+  {
+    "staging_id": "GB:spotlog:47:47270",
+    "name_raw": "SWiFT**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47401",
+    "name_raw": "Star Of The East**,North Eastern",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47488",
+    "name_raw": "Rail Riders**, Davies The Ocean**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47540",
+    "name_raw": "The Institution of Civil Engineers**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47555",
+    "name_raw": "Ressaldar**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47575",
+    "name_raw": "City of Hereford**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47580",
+    "name_raw": "County of Essex, Restormel**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47593",
+    "name_raw": "York InterCity Control**, Saint David/Dewi Saint**, Galloway Princess",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47628",
+    "name_raw": "Sir Daniel Gooch**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47635",
+    "name_raw": "The Lass O'Ballochmyle**, Jimmy Milne",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47701",
+    "name_raw": "Saint Andrew**, Old Oak Common Traction & Rolling Stock Depot**, Waverley",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47703",
+    "name_raw": "Saint Mungo**, The Queen Mother**, Hermes**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47707",
+    "name_raw": "Holyrood**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47709",
+    "name_raw": "The Lord Provost**, Dionysos**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47712",
+    "name_raw": "Lady Diana Spencer, Dick Whittington**, Artemis**, Pride of Carlisle**",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47714",
+    "name_raw": "Thames**, Grampian Region**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47715",
+    "name_raw": "Haymarket**, Poseidon**,Rail Engineering Solutions Quality Assured",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47716",
+    "name_raw": "Duke of Edinburgh's Award**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47717",
+    "name_raw": "Tayside Region**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47721",
+    "name_raw": "Saint Bede**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47722",
+    "name_raw": "The Queen Mother**, Mayflower**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47725",
+    "name_raw": "Red Star ISO 9002**, The Railway Mission**, Bristol Barton Hill**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47726",
+    "name_raw": "Royal Logistic Corps Postal & Courier Services**, Manchester Airport Progress**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47727",
+    "name_raw": "The Gloucestershire Regiment**, Duke of Edinburgh's Award**, Caerphilly Castle/Castell Caerffilli**, Rebecca",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47733",
+    "name_raw": "Eastern Star**, County of Norfolk**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47737",
+    "name_raw": "Resurgent**, Carlisle Currock**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47739",
+    "name_raw": "Resourceful**, Robin of Templecombe",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47741",
+    "name_raw": "Resilient**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47744",
+    "name_raw": "Dewi Sant/Saint David**, The Cornish Experience**, Saint Edwin**, Royal Mail Cheltenham**",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47746",
+    "name_raw": "The Bobby**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47747",
+    "name_raw": "Castell Caerffili/Caerphilly Castle**, Res Publica**, Graham Farish**, Florence Nightingale**",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47749",
+    "name_raw": "City of Truro**, Resplendent**, Atlantic College**, Demelza",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47750",
+    "name_raw": "ATLAS**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47760",
+    "name_raw": "Sir William Burrell**, Restless**, Ribblehead Viaduct**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47761",
+    "name_raw": "Colossus**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47768",
+    "name_raw": "Bristol Bath Road**, Resonant**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47769",
+    "name_raw": "Horwich Enterprise**, Resolve",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47771",
+    "name_raw": "The Geordie**, Heaton Traincare Depot**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47772",
+    "name_raw": "Sir Gwynedd/County of Gwynedd**, Carnforth TMD**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47773",
+    "name_raw": "The Queen Mother**, Reservist**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47776",
+    "name_raw": "The Royal Society of Edinburgh**, Respected**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47780",
+    "name_raw": "Fair Rosamund**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47782",
+    "name_raw": "Glorious Devon**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47785",
+    "name_raw": "The Statesman**, Fiona Castle**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47786",
+    "name_raw": "Royal Worcester**, Roy Castle OBE",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47787",
+    "name_raw": "SS Great Britain**, Windsor Castle**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47791",
+    "name_raw": "Confederation of British Industry**, Venice Simplon Orient Express**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47793",
+    "name_raw": "James Nightall GC, Saint Augustine**, Christopher Wren**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47798",
+    "name_raw": "FIRE FLY**, Prince William",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47799",
+    "name_raw": "Windsor Castle**, Prince Henry**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47802",
+    "name_raw": "Pride of Cumbria**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47804",
+    "name_raw": "Kettering**, Robin Hood**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47812",
+    "name_raw": "Pride of Eastleigh**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47813",
+    "name_raw": "SS Great Britain**, John Peel**, Solent**, Jack Frost**",
+    "contains_double_star": true,
+    "parsed_name_count": 4
+  },
+  {
+    "staging_id": "GB:spotlog:47:47815",
+    "name_raw": "Abertawe/Landore**, Lost Boys 68-88**,Great Western",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47816",
+    "name_raw": "Bristol Bath Road Quality Approved**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47818",
+    "name_raw": "Strathclyde**, Emily**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47826",
+    "name_raw": "Springburn**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47828",
+    "name_raw": "Severn Valley Railway**, Joe Strummer**, Titan Star**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47829",
+    "name_raw": "POLICE**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47830",
+    "name_raw": "BEECHING'S LEGACY**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  },
+  {
+    "staging_id": "GB:spotlog:47:47832",
+    "name_raw": "Tamar**, Driver Tom Clarke OBE**, Solway Princess**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47839",
+    "name_raw": "Royal County of Berkshire**, Pride of Saltley**, Pegasus**",
+    "contains_double_star": true,
+    "parsed_name_count": 3
+  },
+  {
+    "staging_id": "GB:spotlog:47:47841",
+    "name_raw": "The Institution of Mechanical Engineers, Spirit of Chester**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47847",
+    "name_raw": "Benjamin Gimbert GC**, Railway World Magazine",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47848",
+    "name_raw": "Newton Abbot Festival of Transport**, Titan Star",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47851",
+    "name_raw": "Industry Year 1986**, Traction Magazine**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47854",
+    "name_raw": "Women's Royal Voluntary Service**, Diamond Jubilee**",
+    "contains_double_star": true,
+    "parsed_name_count": 2
+  },
+  {
+    "staging_id": "GB:spotlog:47:47972",
+    "name_raw": "The Royal Army Ordnance Corps**",
+    "contains_double_star": true,
+    "parsed_name_count": 1
+  }
+]
